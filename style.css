@@ -1,0 +1,388 @@
+/* style.css */
+
+/* --- Global & Fonts --- */
+/* Import Google Font (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Enable smooth scrolling natively */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    line-height: 1.7; /* Improve readability */
+    color: #343a40; /* Dark grey text color */
+    background-color: #f8f9fa; /* Light grey background */
+    padding-top: 56px; /* Add padding to prevent content from hiding behind fixed navbar */
+}
+
+/* --- Helper Classes --- */
+/* Class added to sections to help JS calculate scroll offset */
+.scroll-target {
+    padding-top: 60px; /* Offset equal to navbar height + extra space */
+    margin-top: -60px; /* Pull the section back up visually */
+}
+
+/* --- Animation Classes --- */
+/* Initial state for fade-in elements */
+.fade-in {
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition for opacity and transform */
+}
+
+/* State when element becomes visible */
+.fade-in.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+}
+
+
+/* --- Navigation Bar --- */
+.navbar {
+    transition: background-color 0.3s ease; /* Smooth background color change on scroll */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar-brand {
+    font-weight: 600; /* Make brand slightly bolder */
+    font-size: 1.4rem; /* Increase brand font size */
+}
+
+.nav-link {
+    font-weight: 400; /* Standard font weight for links */
+    padding: 0.8rem 1rem !important; /* Custom padding for nav links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Style for hovered or active nav links */
+.nav-link:hover,
+.nav-link.active {
+    color: #6FB1FC !important; /* Light blue accent color */
+}
+
+/* Specific styling for the resume download link */
+.resume-link {
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 0.5rem 1rem !important; /* Adjust padding */
+    margin-left: 0.5rem; /* Add space to the left */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+}
+
+.resume-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background on hover */
+    border-color: rgba(255, 255, 255, 0.8); /* Make border more visible on hover */
+    color: #fff !important; /* Ensure text stays white */
+}
+
+
+/* --- Home/Hero Section --- */
+.hero-section {
+    min-height: 100vh; /* Ensure section takes at least full viewport height */
+    /* Gradient background */
+    background: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
+    color: #ffffff; /* White text */
+    position: relative; /* Needed for potential pseudo-elements */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    padding: 6rem 1rem; /* Add vertical padding and some horizontal padding */
+}
+
+/* Style for the profile picture */
+.profile-picture {
+    max-width: 250px; /* Max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border: 5px solid rgba(255, 255, 255, 0.5); /* White border with transparency */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.hero-section h1 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle text shadow for readability */
+}
+
+.hero-section .lead {
+    font-weight: 300; /* Lighter font weight for lead text */
+    font-size: 1.5rem; /* Larger font size */
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+}
+
+/* Style for the new description paragraph */
+.hero-description {
+    font-size: 1.1rem; /* Slightly larger than default paragraph */
+    font-weight: 300; /* Lighter weight */
+    color: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+    max-width: 650px; /* Limit width */
+    /* Center text block on small screens when stacked */
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Override centering on larger screens where text is left-aligned */
+@media (min-width: 992px) {
+    .hero-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+/* Styling for contact info links and text in hero */
+.hero-section .contact-info a,
+.hero-section .contact-info span {
+    font-size: 0.95rem; /* Slightly smaller font size */
+    color: rgba(255, 255, 255, 0.85); /* More transparent white */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+.hero-section .contact-info a:hover {
+    color: #fff; /* Full white on hover */
+}
+
+/* --- General Section Styling --- */
+section {
+    padding: 60px 0; /* Standard vertical padding for sections */
+}
+
+.section-title {
+    font-weight: 700; /* Bold section titles */
+    color: #0052D4; /* Primary blue color */
+    position: relative; /* Needed for the pseudo-element underline */
+    padding-bottom: 15px; /* Space below title text */
+    margin-bottom: 40px !important; /* Ensure consistent bottom margin, override Bootstrap defaults */
+}
+
+/* Decorative underline for section titles */
+.section-title::after {
+    content: ''; /* Required for pseudo-elements */
+    display: block; /* Make it a block element */
+    width: 60px; /* Width of the underline */
+    height: 3px; /* Thickness of the underline */
+    background-color: #6FB1FC; /* Accent blue color */
+    position: absolute; /* Position relative to the title */
+    bottom: 0; /* Place at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Fine-tune centering */
+}
+
+/* Color for icons within section titles */
+.section-title i {
+    color: #4364F7; /* Slightly different blue */
+}
+
+/* --- Skills Section --- */
+#skills h6 {
+    font-weight: 600; /* Bold skill category titles */
+    margin-bottom: 1rem; /* Space below category title */
+    color: #495057; /* Dark grey color */
+    display: flex; /* Use flex to align icon and text */
+    align-items: center; /* Vertically align icon and text */
+}
+#skills h6 i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Styling for skill badges */
+#skills .badge {
+    font-size: 0.85rem; /* Slightly smaller font size */
+    padding: 0.5em 0.8em; /* Padding within badge */
+    font-weight: 400; /* Standard font weight */
+    border: 1px solid #dee2e6; /* Light grey border */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    cursor: default; /* Indicate they aren't clickable */
+}
+#skills .badge:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* --- Experience Section --- */
+#experience {
+    background-color: #ffffff; /* White background for contrast */
+}
+
+/* Styling for experience cards */
+.experience-card {
+    border-left: 4px solid #4364F7; /* Blue accent border on the left */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover transitions */
+    border-radius: 8px; /* Rounded corners */
+}
+.experience-card:hover {
+   transform: translateY(-5px); /* Lift card on hover */
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important; /* Enhance shadow on hover */
+}
+.experience-card .card-title {
+    font-weight: 600; /* Bold job title */
+    color: #343a40; /* Dark text color */
+}
+.experience-card .card-subtitle {
+    font-style: italic; /* Italicize company/location */
+}
+.experience-card ul {
+    padding-left: 1.2rem; /* Indent bullet points */
+    margin-bottom: 0; /* Remove default bottom margin */
+    color: #6c757d; /* Lighter text color for details */
+}
+.experience-card ul li {
+    margin-bottom: 0.4rem; /* Space between bullet points */
+}
+
+/* --- Accomplishments Section --- */
+/* Styling for accomplishment cards (Education, Certs, Volunteering) */
+.accomplishment-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover transitions */
+    border-radius: 8px; /* Rounded corners */
+}
+.accomplishment-card:hover {
+   transform: translateY(-5px); /* Lift card on hover */
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important; /* Enhance shadow on hover */
+}
+.accomplishment-card .card-title {
+    font-weight: 600; /* Bold title */
+    color: #343a40; /* Dark text color */
+    display: flex; /* Use flex to align icon and text */
+    align-items: center; /* Vertically align icon and text */
+}
+.accomplishment-card .card-title i {
+    margin-right: 10px; /* Space between icon and title */
+    width: 20px; /* Fixed width for icon alignment */
+}
+.accomplishment-card hr {
+    margin-top: 0.5rem; /* Space above horizontal rule */
+    margin-bottom: 1rem; /* Space below horizontal rule */
+    border-top: 1px solid rgba(0,0,0,.1); /* Light grey rule */
+}
+/* Align icons within the certification list */
+.accomplishment-card ul li i {
+     width: 18px; /* Fixed width for alignment */
+}
+
+/* --- Projects Section --- */
+#projects {
+     background-color: #ffffff; /* White background for contrast */
+}
+/* Styling for project cards */
+.project-card {
+    border-top: 4px solid #6FB1FC; /* Accent border on top (different color) */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover transitions */
+    border-radius: 8px; /* Rounded corners */
+}
+.project-card:hover {
+   transform: translateY(-5px); /* Lift card on hover */
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important; /* Enhance shadow on hover */
+}
+.project-card .card-title {
+    font-weight: 600; /* Bold project title */
+    color: #343a40; /* Dark text color */
+}
+.project-card ul {
+    padding-left: 1.2rem; /* Indent bullet points */
+    margin-bottom: 0; /* Remove default bottom margin */
+    color: #6c757d; /* Lighter text color for details */
+}
+.project-card ul li {
+    margin-bottom: 0.4rem; /* Space between bullet points */
+}
+
+/* --- Contact Section --- */
+#contact .lead {
+    color: #6c757d; /* Lighter text color for lead paragraph */
+    font-weight: 300; /* Lighter font weight */
+}
+/* Styling for buttons in contact section */
+#contact .btn {
+    padding: 0.8rem 1.8rem; /* Custom padding */
+    font-size: 1rem; /* Standard font size */
+    font-weight: 600; /* Bolder text */
+    border-radius: 50px; /* Pill shape */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover transitions */
+}
+#contact .btn:hover {
+    transform: translateY(-3px); /* Lift button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+/* Specific style for LinkedIn button */
+#contact .btn-info {
+    background-color: #007bb5; /* LinkedIn blue */
+    border-color: #007bb5; /* Match border color */
+}
+
+/* --- Footer --- */
+footer {
+    padding: 2rem 0; /* Vertical padding for footer */
+}
+
+/* Styling for footer links */
+footer a {
+   color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+   transition: color 0.3s ease; /* Smooth color transition */
+}
+
+footer a:hover {
+   color: #fff; /* Full white on hover */
+}
+
+/* --- Responsiveness --- */
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 56px; /* Ensure padding matches navbar height */
+    }
+    .hero-section {
+        padding: 4rem 1rem; /* Reduce padding on smaller screens */
+        text-align: center; /* Center text elements when stacked */
+    }
+    .hero-section h1 {
+        font-size: 2.5rem; /* Reduce heading size */
+    }
+     .hero-section .lead {
+        font-size: 1.2rem; /* Reduce lead text size */
+    }
+    .section-title {
+        font-size: 1.8rem; /* Reduce section title size */
+    }
+     /* Center profile picture when stacked */
+    .profile-picture {
+        margin-bottom: 1.5rem; /* Add space below picture when stacked */
+        max-width: 200px; /* Slightly smaller picture on medium screens */
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    /* Stack contact info vertically in hero */
+    .hero-section .contact-info a,
+    .hero-section .contact-info span {
+        display: block;
+        margin: 5px 0 !important;
+    }
+    /* Adjust skills columns for medium screens (2 columns) */
+    #skills .col-lg-3 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+     .profile-picture {
+        max-width: 180px; /* Smaller picture on small screens */
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem; /* Further reduce heading size */
+    }
+     .hero-section .lead {
+        font-size: 1.1rem; /* Further reduce lead text size */
+    }
+     .section-title {
+        font-size: 1.6rem; /* Further reduce section title size */
+    }
+     /* Adjust skills columns for small screens (1 column) */
+     #skills .col-lg-3 {
+        width: 100%;
+    }
+     .profile-picture {
+        max-width: 150px; /* Even smaller picture */
+    }
+}
