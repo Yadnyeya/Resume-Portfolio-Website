@@ -26,7 +26,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#accomplishments">Accomplishments</a></li>
@@ -71,61 +71,90 @@
 
         <section id="skills" class="py-5 scroll-target">
              <div class="fade-in">
-                <h2 class="section-title text-center mb-5"><i class="fas fa-code me-2"></i>Skills</h2>
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <h6><i class="fas fa-chart-line me-2 text-primary"></i>Business Analysis</h6>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Requirement Gathering</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">BRD/FRD/ERD</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Process Modeling (DFD)</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">MoSCoW</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">SWOT</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">RCA</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Cost-Benefit Analysis</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">UAT</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">RACI</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Gap Analysis</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Financial Modeling</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Confluence</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Bloomberg Terminal</span>
+                <h2 class="section-title text-center mb-5"><i class="fas fa-cogs me-2"></i>Skills</h2>
+                <div class="row gy-4"> {/* gy-4 adds vertical gap */}
+                    {/* Business Analysis Skills Column */}
+                    <div class="col-lg-6 col-xl-3">
+                        <div class="skill-category">
+                            <h6><i class="fas fa-brain me-2 text-primary"></i>Business Analysis Skills</h6>
+                            <p class="skill-subcategory-title">Initiation & Planning:</p>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Requirement Gathering</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">BRD</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">FRD</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Stakeholder Analysis</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">ERD</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">DFD</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Process Flow Diagram</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">MoSCoW Method</span>
+
+                            <p class="skill-subcategory-title mt-3">Analysis:</p>
+                            <span class="badge bg-light text-dark border me-1 mb-1">SWOT Analysis</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">RCA</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Gap Analysis</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Use Case Diagrams</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">User Stories</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Cost-Benefit Analysis</span>
+
+                            <p class="skill-subcategory-title mt-3">Validation & Handoff:</p>
+                            <span class="badge bg-light text-dark border me-1 mb-1">RACI Chart</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Financial Modeling</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">UAT</span>
+                        </div>
                     </div>
-                     <div class="col-md-6 col-lg-3 mb-4">
-                        <h6><i class="fas fa-tasks me-2 text-success"></i>Project Management</h6>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Agile/Scrum</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Waterfall</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Kanban</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">SDLC</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Jira</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Trello</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">MS Project</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">TeamDynamix</span>
+
+                    {/* Project Management Skills Column */}
+                    <div class="col-lg-6 col-xl-3">
+                         <div class="skill-category">
+                            <h6><i class="fas fa-tasks me-2 text-success"></i>Project Management</h6>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Agile (Scrum, Kanban)</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Waterfall</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">SDLC</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Jira</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Trello</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">MS Project</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">TeamDynamix</span>
+                        </div>
                     </div>
-                     <div class="col-md-6 col-lg-3 mb-4">
-                        <h6><i class="fas fa-chart-pie me-2 text-info"></i>Data Modeling & Analysis</h6>
-                         <span class="badge bg-light text-dark border me-1 mb-1">Power BI</span>
-                         <span class="badge bg-light text-dark border me-1 mb-1">Tableau</span>
-                         <span class="badge bg-light text-dark border me-1 mb-1">Excel (Advanced)</span>
-                         <span class="badge bg-light text-dark border me-1 mb-1">Google Analytics</span>
-                         <span class="badge bg-light text-dark border me-1 mb-1">Visio</span>
-                         <span class="badge bg-light text-dark border me-1 mb-1">Lucidchart</span>
-                         <span class="badge bg-light text-dark border me-1 mb-1">Draw.io</span>
-                         <span class="badge bg-light text-dark border me-1 mb-1">Figma</span>
+
+                    {/* Languages & Databases Skills Column */}
+                    <div class="col-lg-6 col-xl-3">
+                         <div class="skill-category">
+                            <h6><i class="fas fa-laptop-code me-2 text-info"></i>Languages & Databases</h6>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Python (Pandas, Matplotlib)</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">C++</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">R</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">HTML</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">CSS</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">JavaScript (JS)</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">SQL</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">MySQL</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">SSMS</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Oracle</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">BigQuery</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Hadoop</span>
+                        </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <h6><i class="fas fa-laptop-code me-2 text-secondary"></i>Languages, DBs & Platforms</h6>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Python (Pandas, Boto3)</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">C++</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">R</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">SQL</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">MySQL/SSMS</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Oracle</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">BigQuery</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Hadoop</span>
-                        <span class="badge bg-warning text-dark border me-1 mb-1">AWS</span>
-                        <span class="badge bg-primary text-white border me-1 mb-1">GCP</span>
-                        <span class="badge bg-info text-dark border me-1 mb-1">Azure</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Jamf/SCCM/Intune</span>
-                        <span class="badge bg-light text-dark border me-1 mb-1">Jenkins</span>
+
+                    {/* Platforms & Tools Skills Column */}
+                    <div class="col-lg-6 col-xl-3">
+                         <div class="skill-category">
+                            <h6><i class="fas fa-tools me-2 text-warning"></i>Platforms & Tools</h6>
+                            <span class="badge bg-light text-dark border me-1 mb-1">AWS</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">GCP</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Azure</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Microsoft Intune</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Active Directory</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Jamf</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">SCCM</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Excel (PivotTables, VLOOKUP, Analysis ToolPak)</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Power BI</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Tableau</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Google Analytics</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">MS Visio</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Lucidchart</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Figma</span>
+                            <span class="badge bg-light text-dark border me-1 mb-1">Bloomberg Terminal</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -272,7 +301,7 @@
                             <a href="mailto:yadnyeyavairat@gmail.com" class="btn btn-primary btn-lg me-3 mb-3">
                                 <i class="fas fa-envelope me-2"></i> Email Me
                             </a>
-                            <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer" class="btn btn-info btn-lg text-white mb-3">
+                            <a href="https://www.linkedin.com/in/yadnyeya-vairat/" target="_blank" rel="noopener noreferrer" class="btn btn-info btn-lg text-white mb-3">
                                 <i class="fab fa-linkedin me-2"></i> LinkedIn
                             </a>
                         </p>
@@ -291,8 +320,8 @@
         <div class="container">
             <p class="mb-2">&copy; 2025 Yadnyeya Vairat. All Rights Reserved.</p>
             <p class="mb-0 small">
-                 <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer" class="text-white-50 text-decoration-none me-2">LinkedIn</a> |
-                 <a href="YOUR_GITHUB_URL" target="_blank" rel="noopener noreferrer" class="text-white-50 text-decoration-none ms-2">GitHub</a>
+                 <a href="https://www.linkedin.com/in/yadnyeya-vairat/" target="_blank" rel="noopener noreferrer" class="text-white-50 text-decoration-none me-2">LinkedIn</a> |
+                 <a href="https://github.com/Yadnyeya" target="_blank" rel="noopener noreferrer" class="text-white-50 text-decoration-none ms-2">GitHub</a>
              </p>
         </div>
     </footer>

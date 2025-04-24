@@ -110,7 +110,7 @@ body {
     color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
 }
 
-/* Style for the new description paragraph */
+/* Style for the description paragraph */
 .hero-description {
     font-size: 1.1rem; /* Slightly larger than default paragraph */
     font-weight: 300; /* Lighter weight */
@@ -173,16 +173,33 @@ section {
 }
 
 /* --- Skills Section --- */
+/* Style for the container of each skill category */
+.skill-category {
+    margin-bottom: 1.5rem; /* Add space below each category block */
+}
+
 #skills h6 {
     font-weight: 600; /* Bold skill category titles */
     margin-bottom: 1rem; /* Space below category title */
     color: #495057; /* Dark grey color */
     display: flex; /* Use flex to align icon and text */
     align-items: center; /* Vertically align icon and text */
+    border-bottom: 1px solid #eee; /* Add a light separator line */
+    padding-bottom: 0.5rem; /* Space below separator */
 }
 #skills h6 i {
     margin-right: 8px; /* Space between icon and text */
 }
+
+/* Style for subcategory titles (e.g., "Initiation & Planning:") */
+.skill-subcategory-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #6c757d; /* Slightly lighter grey */
+    margin-bottom: 0.5rem;
+    display: block; /* Ensure it takes its own line */
+}
+
 
 /* Styling for skill badges */
 #skills .badge {
@@ -347,6 +364,10 @@ footer a:hover {
         margin-bottom: 1.5rem; /* Add space below picture when stacked */
         max-width: 200px; /* Slightly smaller picture on medium screens */
     }
+    /* Adjust skill columns for medium screens */
+    .col-xl-3 {
+        width: 50%; /* Make skill columns 2 per row */
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -356,11 +377,6 @@ footer a:hover {
     .hero-section .contact-info span {
         display: block;
         margin: 5px 0 !important;
-    }
-    /* Adjust skills columns for medium screens (2 columns) */
-    #skills .col-lg-3 {
-        flex: 0 0 auto;
-        width: 50%;
     }
      .profile-picture {
         max-width: 180px; /* Smaller picture on small screens */
@@ -378,11 +394,11 @@ footer a:hover {
      .section-title {
         font-size: 1.6rem; /* Further reduce section title size */
     }
-     /* Adjust skills columns for small screens (1 column) */
-     #skills .col-lg-3 {
-        width: 100%;
-    }
      .profile-picture {
         max-width: 150px; /* Even smaller picture */
+    }
+    /* Make skill columns full width on extra small screens */
+    .col-xl-3 {
+        width: 100%;
     }
 }
