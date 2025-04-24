@@ -82,8 +82,8 @@ body {
 /* --- Home/Hero Section --- */
 .hero-section {
     min-height: 100vh; /* Ensure section takes at least full viewport height */
-    /* Gradient background */
-    background: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
+    /* UPDATED GRADIENT: Using darker, less bright blues */
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 50%, #2980b9 100%);
     color: #ffffff; /* White text */
     position: relative; /* Needed for potential pseudo-elements */
     display: flex; /* Use flexbox for alignment */
@@ -148,7 +148,7 @@ section {
 
 .section-title {
     font-weight: 700; /* Bold section titles */
-    color: #0052D4; /* Primary blue color */
+    color: #2c3e50; /* Darker blue to match new theme */
     position: relative; /* Needed for the pseudo-element underline */
     padding-bottom: 15px; /* Space below title text */
     margin-bottom: 40px !important; /* Ensure consistent bottom margin, override Bootstrap defaults */
@@ -160,7 +160,7 @@ section {
     display: block; /* Make it a block element */
     width: 60px; /* Width of the underline */
     height: 3px; /* Thickness of the underline */
-    background-color: #6FB1FC; /* Accent blue color */
+    background-color: #3498db; /* Medium blue from new theme */
     position: absolute; /* Position relative to the title */
     bottom: 0; /* Place at the bottom */
     left: 50%; /* Center horizontally */
@@ -169,7 +169,7 @@ section {
 
 /* Color for icons within section titles */
 .section-title i {
-    color: #4364F7; /* Slightly different blue */
+    color: #3498db; /* Medium blue from new theme */
 }
 
 /* --- Skills Section --- */
@@ -221,7 +221,7 @@ section {
 
 /* Styling for experience cards */
 .experience-card {
-    border-left: 4px solid #4364F7; /* Blue accent border on the left */
+    border-left: 4px solid #3498db; /* Medium blue accent border */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover transitions */
     border-radius: 8px; /* Rounded corners */
 }
@@ -281,7 +281,7 @@ section {
 }
 /* Styling for project cards */
 .project-card {
-    border-top: 4px solid #6FB1FC; /* Accent border on top (different color) */
+    border-top: 4px solid #2980b9; /* Darker blue accent border */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover transitions */
     border-radius: 8px; /* Rounded corners */
 }
@@ -319,11 +319,26 @@ section {
     transform: translateY(-3px); /* Lift button on hover */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
+/* Primary button uses the medium blue now */
+#contact .btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+#contact .btn-primary:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    border-color: #2980b9;
+}
+
 /* Specific style for LinkedIn button */
 #contact .btn-info {
     background-color: #007bb5; /* LinkedIn blue */
     border-color: #007bb5; /* Match border color */
 }
+#contact .btn-info:hover {
+    background-color: #005f8e; /* Darker LinkedIn blue */
+    border-color: #005f8e;
+}
+
 
 /* --- Footer --- */
 footer {
@@ -365,7 +380,7 @@ footer a:hover {
         max-width: 200px; /* Slightly smaller picture on medium screens */
     }
     /* Adjust skill columns for medium screens */
-    .col-xl-3 {
+    .col-lg-4 { /* Target the columns used in skills section */
         width: 50%; /* Make skill columns 2 per row */
     }
 }
@@ -398,7 +413,7 @@ footer a:hover {
         max-width: 150px; /* Even smaller picture */
     }
     /* Make skill columns full width on extra small screens */
-    .col-xl-3 {
+    .col-lg-4 { /* Target the columns used in skills section */
         width: 100%;
     }
 }
