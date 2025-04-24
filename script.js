@@ -129,4 +129,4 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-}); // End of DOMContentLoaded listener
+}); // End of DOMContentLoaded 
