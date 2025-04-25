@@ -1,126 +1,130 @@
 /* style.css */
 
 /* --- Global & Fonts --- */
-/* Import Google Font (Poppins) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Enable smooth scrolling natively */
 html {
     scroll-behavior: smooth;
 }
 
-/* Basic body styling */
 body {
-    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
-    line-height: 1.7; /* Improve readability */
-    color: #343a40; /* Dark grey text color */
-    background-color: #f8f9fa; /* Light grey background */
-    padding-top: 56px; /* Add padding to prevent content from hiding behind fixed navbar */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: #343a40;
+    background-color: #f8f9fa;
+    padding-top: 56px;
 }
 
 /* --- Helper Classes --- */
-/* Class added to sections to help JS calculate scroll offset */
 .scroll-target {
-    padding-top: 60px; /* Offset equal to navbar height + extra space */
-    margin-top: -60px; /* Pull the section back up visually */
+    padding-top: 60px;
+    margin-top: -60px;
 }
 
 /* --- Animation Classes --- */
-/* Initial state for fade-in elements */
 .fade-in {
-    opacity: 0; /* Start fully transparent */
-    transform: translateY(20px); /* Start slightly lower */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition for opacity and transform */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* State when element becomes visible */
 .fade-in.visible {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Define the gradient animation */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* Move to end position */
+    }
+    100% {
+        background-position: 0% 50%; /* Return to start */
+    }
 }
 
 
 /* --- Navigation Bar --- */
 .navbar {
-    transition: background-color 0.3s ease; /* Smooth background color change on scroll */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
-    font-weight: 600; /* Make brand slightly bolder */
-    font-size: 1.4rem; /* Increase brand font size */
+    font-weight: 600;
+    font-size: 1.4rem;
 }
 
 .nav-link {
-    font-weight: 400; /* Standard font weight for links */
-    padding: 0.8rem 1rem !important; /* Custom padding for nav links */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-weight: 400;
+    padding: 0.8rem 1rem !important;
+    transition: color 0.3s ease;
 }
 
-/* Style for hovered or active nav links */
 .nav-link:hover,
 .nav-link.active {
     color: #6FB1FC !important; /* Light blue accent color */
 }
 
-/* Specific styling for the resume download link */
 .resume-link {
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle border */
-    border-radius: 20px; /* Rounded corners */
-    padding: 0.5rem 1rem !important; /* Adjust padding */
-    margin-left: 0.5rem; /* Add space to the left */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 0.5rem 1rem !important;
+    margin-left: 0.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .resume-link:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Slight background on hover */
-    border-color: rgba(255, 255, 255, 0.8); /* Make border more visible on hover */
-    color: #fff !important; /* Ensure text stays white */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+    color: #fff !important;
 }
 
 
 /* --- Home/Hero Section --- */
 .hero-section {
-    min-height: 100vh; /* Ensure section takes at least full viewport height */
-    /* UPDATED GRADIENT: Using darker, less bright blues */
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 50%, #2980b9 100%);
-    color: #ffffff; /* White text */
-    position: relative; /* Needed for potential pseudo-elements */
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-    padding: 6rem 1rem; /* Add vertical padding and some horizontal padding */
+    min-height: 100vh;
+    /* UPDATED GRADIENT: Using deeper blues in a radial format */
+    background: radial-gradient(circle at center, #3b82f6, #1e3a8a, #0f172a); /* Example: Bright Blue -> Dark Blue -> Very Dark Blue */
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem;
+    /* Animation properties */
+    background-size: 300% 300%; /* Make the gradient larger than the container to allow movement */
+    animation: gradient-animation 20s ease infinite; /* Apply the animation */
 }
 
-/* Style for the profile picture */
 .profile-picture {
-    max-width: 250px; /* Max width for the image */
-    height: auto; /* Maintain aspect ratio */
-    border: 5px solid rgba(255, 255, 255, 0.5); /* White border with transparency */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+    max-width: 250px;
+    height: auto;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hero-section h1 {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle text shadow for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero-section .lead {
-    font-weight: 300; /* Lighter font weight for lead text */
-    font-size: 1.5rem; /* Larger font size */
-    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-/* Style for the description paragraph */
 .hero-description {
-    font-size: 1.1rem; /* Slightly larger than default paragraph */
-    font-weight: 300; /* Lighter weight */
-    color: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
-    max-width: 650px; /* Limit width */
-    /* Center text block on small screens when stacked */
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
 }
-/* Override centering on larger screens where text is left-aligned */
 @media (min-width: 992px) {
     .hero-description {
         margin-left: 0;
@@ -128,291 +132,343 @@ body {
     }
 }
 
-
-/* Styling for contact info links and text in hero */
 .hero-section .contact-info a,
 .hero-section .contact-info span {
-    font-size: 0.95rem; /* Slightly smaller font size */
-    color: rgba(255, 255, 255, 0.85); /* More transparent white */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth color transition */
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 .hero-section .contact-info a:hover {
-    color: #fff; /* Full white on hover */
+    color: #fff;
 }
 
 /* --- General Section Styling --- */
 section {
-    padding: 60px 0; /* Standard vertical padding for sections */
+    padding: 60px 0;
 }
 
 .section-title {
-    font-weight: 700; /* Bold section titles */
-    color: #2c3e50; /* Darker blue to match new theme */
-    position: relative; /* Needed for the pseudo-element underline */
-    padding-bottom: 15px; /* Space below title text */
-    margin-bottom: 40px !important; /* Ensure consistent bottom margin, override Bootstrap defaults */
+    font-weight: 700;
+    color: #1e3a8a; /* Darker blue to match new theme */
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 40px !important;
 }
 
-/* Decorative underline for section titles */
 .section-title::after {
-    content: ''; /* Required for pseudo-elements */
-    display: block; /* Make it a block element */
-    width: 60px; /* Width of the underline */
-    height: 3px; /* Thickness of the underline */
-    background-color: #3498db; /* Medium blue from new theme */
-    position: absolute; /* Position relative to the title */
-    bottom: 0; /* Place at the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Fine-tune centering */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #3b82f6; /* Medium blue from new theme */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* Color for icons within section titles */
 .section-title i {
-    color: #3498db; /* Medium blue from new theme */
+    color: #3b82f6; /* Medium blue from new theme */
 }
 
 /* --- Skills Section --- */
-/* Style for the container of each skill category */
 .skill-category {
-    margin-bottom: 1.5rem; /* Add space below each category block */
+    margin-bottom: 1.5rem;
 }
 
 #skills h6 {
-    font-weight: 600; /* Bold skill category titles */
-    margin-bottom: 1rem; /* Space below category title */
-    color: #495057; /* Dark grey color */
-    display: flex; /* Use flex to align icon and text */
-    align-items: center; /* Vertically align icon and text */
-    border-bottom: 1px solid #eee; /* Add a light separator line */
-    padding-bottom: 0.5rem; /* Space below separator */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
 }
 #skills h6 i {
-    margin-right: 8px; /* Space between icon and text */
+    margin-right: 8px;
 }
 
-/* Style for subcategory titles (e.g., "Initiation & Planning:") */
 .skill-subcategory-title {
     font-weight: 600;
     font-size: 0.9rem;
-    color: #6c757d; /* Slightly lighter grey */
+    color: #6c757d;
     margin-bottom: 0.5rem;
-    display: block; /* Ensure it takes its own line */
+    display: block;
 }
 
-
-/* Styling for skill badges */
 #skills .badge {
-    font-size: 0.85rem; /* Slightly smaller font size */
-    padding: 0.5em 0.8em; /* Padding within badge */
-    font-weight: 400; /* Standard font weight */
-    border: 1px solid #dee2e6; /* Light grey border */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
-    cursor: default; /* Indicate they aren't clickable */
+    font-size: 0.85rem;
+    padding: 0.5em 0.8em;
+    font-weight: 400;
+    border: 1px solid #dee2e6;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: default;
 }
 #skills .badge:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05);
 }
 
 /* --- Experience Section --- */
 #experience {
-    background-color: #ffffff; /* White background for contrast */
+    background-color: #ffffff;
 }
 
-/* Styling for experience cards */
 .experience-card {
-    border-left: 4px solid #3498db; /* Medium blue accent border */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover transitions */
-    border-radius: 8px; /* Rounded corners */
+    border-left: 4px solid #1e3a8a; /* Dark blue accent border */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 8px;
 }
 .experience-card:hover {
-   transform: translateY(-5px); /* Lift card on hover */
-   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important; /* Enhance shadow on hover */
+   transform: translateY(-5px);
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important;
 }
 .experience-card .card-title {
-    font-weight: 600; /* Bold job title */
-    color: #343a40; /* Dark text color */
+    font-weight: 600;
+    color: #343a40;
 }
 .experience-card .card-subtitle {
-    font-style: italic; /* Italicize company/location */
+    /* font-style: italic; */ /* Removed italic */
 }
 .experience-card ul {
-    padding-left: 1.2rem; /* Indent bullet points */
-    margin-bottom: 0; /* Remove default bottom margin */
-    color: #6c757d; /* Lighter text color for details */
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+    color: #6c757d;
 }
 .experience-card ul li {
-    margin-bottom: 0.4rem; /* Space between bullet points */
+    margin-bottom: 0.4rem;
 }
+/* Style for the Tools Used paragraph */
+.tools-used {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #6c757d !important; /* Ensure color overrides */
+}
+.tools-used i {
+    margin-right: 4px; /* Space after wrench icon */
+}
+
 
 /* --- Accomplishments Section --- */
-/* Styling for accomplishment cards (Education, Certs, Volunteering) */
 .accomplishment-card {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover transitions */
-    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 8px;
 }
 .accomplishment-card:hover {
-   transform: translateY(-5px); /* Lift card on hover */
-   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important; /* Enhance shadow on hover */
+   transform: translateY(-5px);
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important;
 }
 .accomplishment-card .card-title {
-    font-weight: 600; /* Bold title */
-    color: #343a40; /* Dark text color */
-    display: flex; /* Use flex to align icon and text */
-    align-items: center; /* Vertically align icon and text */
+    font-weight: 600;
+    color: #343a40;
+    display: flex;
+    align-items: center;
 }
 .accomplishment-card .card-title i {
-    margin-right: 10px; /* Space between icon and title */
-    width: 20px; /* Fixed width for icon alignment */
+    margin-right: 10px;
+    width: 20px;
 }
 .accomplishment-card hr {
-    margin-top: 0.5rem; /* Space above horizontal rule */
-    margin-bottom: 1rem; /* Space below horizontal rule */
-    border-top: 1px solid rgba(0,0,0,.1); /* Light grey rule */
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
 }
-/* Align icons within the certification list */
 .accomplishment-card ul li i {
-     width: 18px; /* Fixed width for alignment */
+     width: 18px;
 }
+
+/* --- Relevant Courses Section --- */
+#courses {
+    background-color: #ffffff; /* White background for contrast */
+}
+.course-card {
+    border-left: 4px solid #1abc9c; /* Example accent color (teal) */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 8px;
+}
+.course-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important;
+}
+.course-card .card-title {
+    font-weight: 600;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+}
+.course-card .card-title i {
+    margin-right: 10px;
+    width: 20px;
+}
+.course-card hr {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.course-list li {
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: flex-start; /* Align icon with first line of text */
+}
+.course-list li i {
+    margin-top: 4px; /* Adjust icon vertical position */
+    width: 12px; /* Fixed width for alignment */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
 
 /* --- Projects Section --- */
-#projects {
-     background-color: #ffffff; /* White background for contrast */
-}
-/* Styling for project cards */
+/* #projects { background-color: #ffffff; } */ /* Removed background color */
+
 .project-card {
-    border-top: 4px solid #2980b9; /* Darker blue accent border */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover transitions */
-    border-radius: 8px; /* Rounded corners */
+    border-top: 4px solid #1e3a8a; /* Darker blue accent border */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 8px;
 }
 .project-card:hover {
-   transform: translateY(-5px); /* Lift card on hover */
-   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important; /* Enhance shadow on hover */
+   transform: translateY(-5px);
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important;
 }
 .project-card .card-title {
-    font-weight: 600; /* Bold project title */
-    color: #343a40; /* Dark text color */
+    font-weight: 600;
+    color: #343a40;
 }
 .project-card ul {
-    padding-left: 1.2rem; /* Indent bullet points */
-    margin-bottom: 0; /* Remove default bottom margin */
-    color: #6c757d; /* Lighter text color for details */
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+    color: #6c757d;
 }
 .project-card ul li {
-    margin-bottom: 0.4rem; /* Space between bullet points */
+    margin-bottom: 0.4rem;
 }
+/* Style for the Tools Used paragraph in projects */
+#projects .tools-used {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #6c757d !important;
+}
+#projects .tools-used i {
+    margin-right: 4px;
+}
+
 
 /* --- Contact Section --- */
-#contact .lead {
-    color: #6c757d; /* Lighter text color for lead paragraph */
-    font-weight: 300; /* Lighter font weight */
-}
-/* Styling for buttons in contact section */
-#contact .btn {
-    padding: 0.8rem 1.8rem; /* Custom padding */
-    font-size: 1rem; /* Standard font size */
-    font-weight: 600; /* Bolder text */
-    border-radius: 50px; /* Pill shape */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover transitions */
-}
-#contact .btn:hover {
-    transform: translateY(-3px); /* Lift button on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
-/* Primary button uses the medium blue now */
-#contact .btn-primary {
-    background-color: #3498db;
-    border-color: #3498db;
-}
-#contact .btn-primary:hover {
-    background-color: #2980b9; /* Darker blue on hover */
-    border-color: #2980b9;
+#contact {
+    background-color: #ffffff; /* Added background color */
 }
 
-/* Specific style for LinkedIn button */
+#contact .lead {
+    color: #6c757d;
+    font-weight: 300;
+}
+#contact .btn {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#contact .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+#contact .btn-primary {
+    background-color: #1e3a8a; /* Dark blue */
+    border-color: #1e3a8a;
+}
+#contact .btn-primary:hover {
+    background-color: #0f172a; /* Darker blue on hover */
+    border-color: #0f172a;
+}
+
 #contact .btn-info {
-    background-color: #007bb5; /* LinkedIn blue */
-    border-color: #007bb5; /* Match border color */
+    background-color: #007bb5;
+    border-color: #007bb5;
 }
 #contact .btn-info:hover {
-    background-color: #005f8e; /* Darker LinkedIn blue */
+    background-color: #005f8e;
     border-color: #005f8e;
 }
 
 
 /* --- Footer --- */
 footer {
-    padding: 2rem 0; /* Vertical padding for footer */
+    padding: 2rem 0;
 }
 
-/* Styling for footer links */
 footer a {
-   color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
-   transition: color 0.3s ease; /* Smooth color transition */
+   color: rgba(255, 255, 255, 0.6);
+   transition: color 0.3s ease;
 }
 
 footer a:hover {
-   color: #fff; /* Full white on hover */
+   color: #fff;
 }
 
 /* --- Responsiveness --- */
-/* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
     body {
-        padding-top: 56px; /* Ensure padding matches navbar height */
+        padding-top: 56px;
     }
     .hero-section {
-        padding: 4rem 1rem; /* Reduce padding on smaller screens */
-        text-align: center; /* Center text elements when stacked */
+        padding: 4rem 1rem;
+        text-align: center;
+        background-size: 400% 400%; /* Ensure size is large enough on smaller screens */
     }
     .hero-section h1 {
-        font-size: 2.5rem; /* Reduce heading size */
+        font-size: 2.5rem;
     }
      .hero-section .lead {
-        font-size: 1.2rem; /* Reduce lead text size */
+        font-size: 1.2rem;
     }
     .section-title {
-        font-size: 1.8rem; /* Reduce section title size */
+        font-size: 1.8rem;
     }
-     /* Center profile picture when stacked */
     .profile-picture {
-        margin-bottom: 1.5rem; /* Add space below picture when stacked */
-        max-width: 200px; /* Slightly smaller picture on medium screens */
+        margin-bottom: 1.5rem;
+        max-width: 200px;
     }
-    /* Adjust skill columns for medium screens */
     .col-lg-4 { /* Target the columns used in skills section */
-        width: 50%; /* Make skill columns 2 per row */
+        width: 50%;
+    }
+    /* Make project columns 1 per row on medium */
+    #projects .col-lg-4 {
+        width: 100%;
     }
 }
 
-/* Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) {
-    /* Stack contact info vertically in hero */
     .hero-section .contact-info a,
     .hero-section .contact-info span {
         display: block;
         margin: 5px 0 !important;
     }
      .profile-picture {
-        max-width: 180px; /* Smaller picture on small screens */
+        max-width: 180px;
+    }
+     /* Adjust project columns for small screens */
+     #projects .col-lg-4 {
+        width: 100%; /* Still 1 column */
+    }
+     #projects .col-md-6 {
+        width: 100%; /* Ensure full width */
     }
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
     .hero-section h1 {
-        font-size: 2rem; /* Further reduce heading size */
+        font-size: 2rem;
     }
      .hero-section .lead {
-        font-size: 1.1rem; /* Further reduce lead text size */
+        font-size: 1.1rem;
     }
      .section-title {
-        font-size: 1.6rem; /* Further reduce section title size */
+        font-size: 1.6rem;
     }
      .profile-picture {
-        max-width: 150px; /* Even smaller picture */
+        max-width: 150px;
     }
-    /* Make skill columns full width on extra small screens */
     .col-lg-4 { /* Target the columns used in skills section */
         width: 100%;
     }
