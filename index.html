@@ -54,7 +54,7 @@
                              onerror="this.onerror=null; this.src='https://placehold.co/300x400/cccccc/ffffff?text=Image+Not+Found';">
                     </div>
                     <div class="col-lg-8 text-center text-lg-start">
-                        <h1 class="display-3 fw-bold mb-3">Yadnyeya Vairat</h1> {/* Increased bottom margin */}
+                        <h1 class="display-3 fw-bold mb-3">Yadnyeya Vairat</h1>
                         <p class="hero-description mb-4">
                             Bridging business and technology through my upcoming MIS and Computer Science degrees, I offer practical skills in IT support, investment analysis, and cloud operations. I excel at analyzing complex problems, optimizing systems, and delivering data-backed solutions to drive tangible results. I am ready to contribute my blend of technical expertise and business acumen to your organization's innovative projects and strategic goals.
                         </p>
@@ -489,12 +489,10 @@ body {
 
 /* Updated profile picture styles */
 .profile-picture {
-    max-width: 280px; /* Slightly adjusted max-width */
-    width: 100%; /* Make width responsive */
-    height: auto; /* Maintain aspect ratio from image file */
-    /* aspect-ratio: 3 / 4; */ /* Commented out: Use if you want to force aspect ratio */
-    /* object-fit: cover; */ /* Commented out: Use with aspect-ratio to cover the area */
-    border-radius: 8px !important; /* Override Bootstrap's img-fluid potentially adding circle */
+    max-width: 350px; /* Increased max-width */
+    width: 100%;
+    height: auto;
+    border-radius: 8px !important; /* Keep slightly rounded corners */
     border: 5px solid rgba(255, 255, 255, 0.8);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
@@ -503,8 +501,6 @@ body {
     text-shadow: none;
     color: #2c3e50;
 }
-
-/* Removed .hero-section .lead rule as the element was removed */
 
 .hero-description {
     font-size: 1.1rem;
@@ -521,11 +517,11 @@ body {
     }
 }
 
-/* Updated hero contact info color for readability */
+/* Updated hero contact info color and link color */
 .hero-section .contact-info a,
 .hero-section .contact-info span {
     font-size: 0.95rem;
-    color: #34495e; /* Make links and span the same color */
+    color: #34495e; /* Unified color for links and span */
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -806,6 +802,12 @@ footer p {
 }
 
 /* --- Responsiveness --- */
+@media (max-width: 1199.98px) { /* Added breakpoint for slightly larger screens */
+    .profile-picture {
+        max-width: 300px; /* Adjust size for large screens */
+    }
+}
+
 @media (max-width: 991.98px) {
     body {
         padding-top: 56px;
@@ -825,7 +827,7 @@ footer p {
     }
     .profile-picture {
         margin-bottom: 1.5rem;
-        max-width: 200px; /* Adjust size for medium screens */
+        max-width: 250px; /* Adjust size for medium screens */
     }
     .col-lg-4 { /* Target the columns used in skills section */
         width: 50%;
@@ -843,7 +845,7 @@ footer p {
         margin: 5px 0 !important;
     }
      .profile-picture {
-        max-width: 180px; /* Adjust size for small screens */
+        max-width: 200px; /* Adjust size for small screens */
     }
      /* Adjust project columns for small screens */
      #projects .col-lg-4 {
@@ -865,7 +867,7 @@ footer p {
         font-size: 1.6rem;
     }
      .profile-picture {
-        max-width: 150px; /* Adjust size for extra small screens */
+        max-width: 180px; /* Adjust size for extra small screens */
         aspect-ratio: initial; /* Let image height determine aspect ratio on smallest screens */
     }
     .col-lg-4 { /* Target the columns used in skills section */
