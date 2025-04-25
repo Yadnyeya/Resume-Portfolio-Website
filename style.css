@@ -56,7 +56,7 @@ body {
 /* Adjusted hover color to match new theme */
 .nav-link:hover,
 .nav-link.active {
-    color: #83a4d4 !important; /* Accent blue from gradient */
+    color: #74ebd5 !important; /* Teal accent color */
 }
 
 .resume-link {
@@ -77,10 +77,10 @@ body {
 /* --- Home/Hero Section --- */
 .hero-section {
     min-height: 100vh;
-    /* UPDATED GRADIENT: Using the new light blue gradient */
-    background: #83a4d4;  /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4); */ /* Chrome 10-25, Safari 5.1-6 - Often not needed anymore */
-    background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* UPDATED GRADIENT: Using the new teal/purple gradient */
+    background: #74ebd5;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5); */ /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #333; /* Changed text color to dark for better contrast on light background */
     position: relative;
     display: flex;
@@ -143,7 +143,7 @@ section {
 
 .section-title {
     font-weight: 700;
-    color: #83a4d4; /* Adjusted color (medium blue from gradient) */
+    color: #8a94d4; /* Adjusted color (medium purple/blue from gradient) */
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 40px !important;
@@ -154,7 +154,7 @@ section {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #b6fbff; /* Adjusted color (lighter cyan from gradient) */
+    background-color: #74ebd5; /* Adjusted color (teal from gradient) */
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -162,7 +162,7 @@ section {
 }
 
 .section-title i {
-    color: #83a4d4; /* Adjusted color */
+    color: #74ebd5; /* Adjusted color */
 }
 
 /* --- Skills Section --- */
@@ -209,7 +209,7 @@ section {
 }
 
 .experience-card {
-    border-left: 4px solid #83a4d4; /* Adjusted color */
+    border-left: 4px solid #ACB6E5; /* Adjusted color (lighter purple/blue from gradient) */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -276,7 +276,7 @@ section {
     background-color: #ffffff; /* White background for contrast */
 }
 .course-card {
-    border-left: 4px solid #83a4d4; /* Adjusted accent color */
+    border-left: 4px solid #74ebd5; /* Adjusted accent color */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -315,7 +315,7 @@ section {
 /* #projects { background-color: #ffffff; } */ /* Removed background color */
 
 .project-card {
-    border-top: 4px solid #83a4d4; /* Adjusted color */
+    border-top: 4px solid #ACB6E5; /* Adjusted color */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -368,13 +368,14 @@ section {
 }
 /* Adjusted primary button color */
 #contact .btn-primary {
-    background-color: #83a4d4;
-    border-color: #83a4d4;
-    color: #fff; /* Ensure text is readable */
+    background-color: #74ebd5; /* Teal */
+    border-color: #74ebd5;
+    color: #333; /* Darker text for light button */
 }
 #contact .btn-primary:hover {
-    background-color: #7190c2; /* Slightly darker blue on hover */
-    border-color: #7190c2;
+    background-color: #63d8c4; /* Slightly darker teal on hover */
+    border-color: #63d8c4;
+    color: #333;
 }
 
 #contact .btn-info {
