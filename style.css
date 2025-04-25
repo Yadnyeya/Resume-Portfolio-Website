@@ -33,18 +33,7 @@ body {
     transform: translateY(0);
 }
 
-/* Define the gradient animation */
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%; /* Start position */
-    }
-    50% {
-        background-position: 100% 50%; /* Move to end position */
-    }
-    100% {
-        background-position: 0% 50%; /* Return to start */
-    }
-}
+/* Removed gradient animation keyframes */
 
 
 /* --- Navigation Bar --- */
@@ -64,9 +53,10 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Adjusted hover color to match new theme */
 .nav-link:hover,
 .nav-link.active {
-    color: #6FB1FC !important; /* Light blue accent color */
+    color: #8BC6EC !important; /* Lighter blue accent color */
 }
 
 .resume-link {
@@ -87,17 +77,16 @@ body {
 /* --- Home/Hero Section --- */
 .hero-section {
     min-height: 100vh;
-    /* UPDATED GRADIENT: Using deeper blues in a radial format */
-    background: radial-gradient(circle at center, #3b82f6, #1e3a8a, #0f172a); /* Example: Bright Blue -> Dark Blue -> Very Dark Blue */
+    /* UPDATED GRADIENT: Using the new static linear gradient */
+    background-color: #8BC6EC; /* Fallback color */
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     color: #ffffff;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 6rem 1rem;
-    /* Animation properties */
-    background-size: 300% 300%; /* Make the gradient larger than the container to allow movement */
-    animation: gradient-animation 20s ease infinite; /* Apply the animation */
+    /* Removed animation properties */
 }
 
 .profile-picture {
@@ -150,7 +139,7 @@ section {
 
 .section-title {
     font-weight: 700;
-    color: #1e3a8a; /* Darker blue to match new theme */
+    color: #7b7fdb; /* Adjusted color (darker purple from gradient) */
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 40px !important;
@@ -161,7 +150,7 @@ section {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #3b82f6; /* Medium blue from new theme */
+    background-color: #8BC6EC; /* Adjusted color (lighter blue from gradient) */
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -169,7 +158,7 @@ section {
 }
 
 .section-title i {
-    color: #3b82f6; /* Medium blue from new theme */
+    color: #8BC6EC; /* Adjusted color */
 }
 
 /* --- Skills Section --- */
@@ -216,7 +205,7 @@ section {
 }
 
 .experience-card {
-    border-left: 4px solid #1e3a8a; /* Dark blue accent border */
+    border-left: 4px solid #9599E2; /* Adjusted color (medium purple from gradient) */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -283,7 +272,7 @@ section {
     background-color: #ffffff; /* White background for contrast */
 }
 .course-card {
-    border-left: 4px solid #1abc9c; /* Example accent color (teal) */
+    border-left: 4px solid #8BC6EC; /* Adjusted accent color */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -322,7 +311,7 @@ section {
 /* #projects { background-color: #ffffff; } */ /* Removed background color */
 
 .project-card {
-    border-top: 4px solid #1e3a8a; /* Darker blue accent border */
+    border-top: 4px solid #9599E2; /* Adjusted color */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -373,13 +362,15 @@ section {
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+/* Adjusted primary button color */
 #contact .btn-primary {
-    background-color: #1e3a8a; /* Dark blue */
-    border-color: #1e3a8a;
+    background-color: #8BC6EC;
+    border-color: #8BC6EC;
+    color: #fff; /* Ensure text is readable */
 }
 #contact .btn-primary:hover {
-    background-color: #0f172a; /* Darker blue on hover */
-    border-color: #0f172a;
+    background-color: #7ab8d8; /* Slightly darker blue on hover */
+    border-color: #7ab8d8;
 }
 
 #contact .btn-info {
@@ -414,7 +405,7 @@ footer a:hover {
     .hero-section {
         padding: 4rem 1rem;
         text-align: center;
-        background-size: 400% 400%; /* Ensure size is large enough on smaller screens */
+        /* Removed background-size for static gradient */
     }
     .hero-section h1 {
         font-size: 2.5rem;
