@@ -48,14 +48,13 @@
             <div class="fade-in">
                 <div class="row align-items-center gy-4">
                     <div class="col-lg-4 text-center text-lg-end">
-                        <img src="https://placehold.co/250x250/6FB1FC/FFFFFF?text=YV"
+                        <img src="https://placehold.co/300x400/ACB6E5/2c3e50?text=YV+3x4"
                              alt="Yadnyeya Vairat Profile Picture"
-                             class="img-fluid rounded-circle profile-picture shadow"
-                             onerror="this.onerror=null; this.src='https://placehold.co/250x250/cccccc/ffffff?text=Image+Not+Found';">
+                             class="img-fluid profile-picture shadow"
+                             onerror="this.onerror=null; this.src='https://placehold.co/300x400/cccccc/ffffff?text=Image+Not+Found';">
                     </div>
                     <div class="col-lg-8 text-center text-lg-start">
-                        <h1 class="display-3 fw-bold mb-2">Yadnyeya Vairat</h1>
-                        <p class="lead mb-3">IT Systems Support | Investment Analysis | Cloud &amp; Data Enthusiast</p>
+                        <h1 class="display-3 fw-bold mb-3">Yadnyeya Vairat</h1> {/* Increased bottom margin */}
                         <p class="hero-description mb-4">
                             Bridging business and technology through my upcoming MIS and Computer Science degrees, I offer practical skills in IT support, investment analysis, and cloud operations. I excel at analyzing complex problems, optimizing systems, and delivering data-backed solutions to drive tangible results. I am ready to contribute my blend of technical expertise and business acumen to your organization's innovative projects and strategic goals.
                         </p>
@@ -303,10 +302,12 @@
             </div>
         </section>
 
-        <section id="projects" class="py-5 scroll-target"> <div class="container fade-in">
+        <section id="projects" class="py-5 scroll-target">
+            <div class="container fade-in">
                 <h2 class="section-title text-center mb-5"><i class="fa-solid fa-pen-to-square me-2"></i>Projects</h2>
                 <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-4"> <div class="card h-100 shadow-sm project-card">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm project-card">
                              <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-1">Restaurant Sales & Inventory Optimization</h5>
                                 <p class="text-muted small tools-used mb-3">
@@ -320,7 +321,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4"> <div class="card h-100 shadow-sm project-card">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm project-card">
                              <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-1">Serverless Web App with User Auth</h5>
                                 <p class="text-muted small tools-used mb-3">
@@ -334,7 +336,8 @@
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-6 col-lg-4"> <div class="card h-100 shadow-sm project-card">
+                     <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm project-card">
                              <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-1">Basic DevOps Cycle</h5>
                                 <p class="text-muted small tools-used mb-3">
@@ -352,7 +355,8 @@
             </div>
         </section>
 
-        <section id="contact" class="py-5 bg-light scroll-target"> <div class="container fade-in">
+        <section id="contact" class="py-5 bg-light scroll-target">
+            <div class="container fade-in">
                 <h2 class="section-title text-center mb-5"><i class="fas fa-envelope me-2"></i>Contact Me</h2>
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
@@ -391,3 +395,480 @@
     <script src="script.js"></script>
 </body>
 </html>
+```
+
+**2. `style.css`** (Updated profile picture and contact info styles)
+
+
+```css
+/* style.css */
+
+/* --- Global & Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: #343a40;
+    background-color: #f8f9fa;
+    padding-top: 56px;
+}
+
+/* --- Helper Classes --- */
+.scroll-target {
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+/* --- Animation Classes --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- Navigation Bar --- */
+.navbar {
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.nav-link {
+    font-weight: 400;
+    padding: 0.8rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #74ebd5 !important; /* Teal accent color */
+}
+
+.resume-link {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 0.5rem 1rem !important;
+    margin-left: 0.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.resume-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+    color: #fff !important;
+}
+
+
+/* --- Home/Hero Section --- */
+.hero-section {
+    min-height: 100vh;
+    background: #74ebd5;  /* fallback for old browsers */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem;
+}
+
+/* Updated profile picture styles */
+.profile-picture {
+    max-width: 280px; /* Slightly adjusted max-width */
+    width: 100%; /* Make width responsive */
+    height: auto; /* Maintain aspect ratio from image file */
+    /* aspect-ratio: 3 / 4; */ /* Commented out: Use if you want to force aspect ratio */
+    /* object-fit: cover; */ /* Commented out: Use with aspect-ratio to cover the area */
+    border-radius: 8px !important; /* Override Bootstrap's img-fluid potentially adding circle */
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero-section h1 {
+    text-shadow: none;
+    color: #2c3e50;
+}
+
+/* Removed .hero-section .lead rule as the element was removed */
+
+.hero-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #34495e;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 992px) {
+    .hero-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Updated hero contact info color for readability */
+.hero-section .contact-info a,
+.hero-section .contact-info span {
+    font-size: 0.95rem;
+    color: #34495e; /* Make links and span the same color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.hero-section .contact-info a:hover {
+    color: #2c3e50; /* Darker hover for links */
+}
+
+/* --- General Section Styling --- */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-weight: 700;
+    color: #8a94d4; /* Adjusted color (medium purple/blue from gradient) */
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 40px !important;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #74ebd5; /* Adjusted color (teal from gradient) */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title i {
+    color: #74ebd5; /* Adjusted color */
+}
+
+/* --- Skills Section --- */
+.skill-category {
+    margin-bottom: 1.5rem;
+}
+
+#skills h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+#skills h6 i {
+    margin-right: 8px;
+}
+
+.skill-subcategory-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#skills .badge {
+    font-size: 0.85rem;
+    padding: 0.5em 0.8em;
+    font-weight: 400;
+    border: 1px solid #dee2e6;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: default;
+}
+#skills .badge:hover {
+    transform: scale(1.05);
+}
+
+/* --- Experience Section --- */
+#experience {
+    background-color: #ffffff;
+}
+
+.experience-card {
+    border-left: 4px solid #ACB6E5; /* Adjusted color (lighter purple/blue from gradient) */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 8px;
+}
+.experience-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important;
+}
+.experience-card .card-title {
+    font-weight: 600;
+    color: #343a40;
+}
+.experience-card .card-subtitle {
+    /* font-style: italic; */ /* Removed italic */
+}
+.experience-card ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+    color: #6c757d;
+}
+.experience-card ul li {
+    margin-bottom: 0.4rem;
+}
+/* Style for the Tools Used paragraph */
+.tools-used {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #6c757d !important; /* Ensure color overrides */
+}
+.tools-used i {
+    margin-right: 4px; /* Space after wrench icon */
+}
+
+
+/* --- Accomplishments Section --- */
+.accomplishment-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 8px;
+}
+.accomplishment-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important;
+}
+.accomplishment-card .card-title {
+    font-weight: 600;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+}
+.accomplishment-card .card-title i {
+    margin-right: 10px;
+    width: 20px;
+}
+.accomplishment-card hr {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.accomplishment-card ul li i {
+     width: 18px;
+}
+
+/* --- Relevant Courses Section --- */
+#courses {
+    background-color: #ffffff; /* White background for contrast */
+}
+.course-card {
+    border-left: 4px solid #74ebd5; /* Adjusted accent color */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 8px;
+}
+.course-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important;
+}
+.course-card .card-title {
+    font-weight: 600;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+}
+.course-card .card-title i {
+    margin-right: 10px;
+    width: 20px;
+}
+.course-card hr {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.course-list li {
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: flex-start; /* Align icon with first line of text */
+}
+.course-list li i {
+    margin-top: 4px; /* Adjust icon vertical position */
+    width: 12px; /* Fixed width for alignment */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+
+/* --- Projects Section --- */
+/* #projects { background-color: #ffffff; } */ /* Removed background color */
+
+.project-card {
+    border-top: 4px solid #ACB6E5; /* Adjusted color */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 8px;
+}
+.project-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important;
+}
+.project-card .card-title {
+    font-weight: 600;
+    color: #343a40;
+}
+.project-card ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+    color: #6c757d;
+}
+.project-card ul li {
+    margin-bottom: 0.4rem;
+}
+/* Style for the Tools Used paragraph in projects */
+#projects .tools-used {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #6c757d !important;
+}
+#projects .tools-used i {
+    margin-right: 4px;
+}
+
+
+/* --- Contact Section --- */
+#contact {
+    background-color: #ffffff; /* Added background color */
+}
+
+#contact .lead {
+    color: #6c757d;
+    font-weight: 300;
+}
+#contact .btn {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#contact .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Adjusted primary button color */
+#contact .btn-primary {
+    background-color: #74ebd5; /* Teal */
+    border-color: #74ebd5;
+    color: #333; /* Darker text for light button */
+}
+#contact .btn-primary:hover {
+    background-color: #63d8c4; /* Slightly darker teal on hover */
+    border-color: #63d8c4;
+    color: #333;
+}
+
+#contact .btn-info {
+    background-color: #007bb5;
+    border-color: #007bb5;
+}
+#contact .btn-info:hover {
+    background-color: #005f8e;
+    border-color: #005f8e;
+}
+
+
+/* --- Footer --- */
+footer {
+    padding: 2rem 0;
+    background-color: #e9ecef; /* Lighter footer background */
+}
+
+/* Adjusted footer link color for lighter background */
+footer a {
+   color: #6c757d; /* Darker grey */
+   transition: color 0.3s ease;
+}
+
+footer a:hover {
+   color: #343a40; /* Even darker grey on hover */
+}
+/* Adjusted footer text color */
+footer p {
+    color: #6c757d;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 56px;
+    }
+    .hero-section {
+        padding: 4rem 1rem;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+     .hero-section .lead {
+        font-size: 1.2rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .profile-picture {
+        margin-bottom: 1.5rem;
+        max-width: 200px; /* Adjust size for medium screens */
+    }
+    .col-lg-4 { /* Target the columns used in skills section */
+        width: 50%;
+    }
+    /* Make project columns 1 per row on medium */
+    #projects .col-lg-4 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section .contact-info a,
+    .hero-section .contact-info span {
+        display: block;
+        margin: 5px 0 !important;
+    }
+     .profile-picture {
+        max-width: 180px; /* Adjust size for small screens */
+    }
+     /* Adjust project columns for small screens */
+     #projects .col-lg-4 {
+        width: 100%; /* Still 1 column */
+    }
+     #projects .col-md-6 {
+        width: 100%; /* Ensure full width */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+     .hero-section .lead {
+        font-size: 1.1rem;
+    }
+     .section-title {
+        font-size: 1.6rem;
+    }
+     .profile-picture {
+        max-width: 150px; /* Adjust size for extra small screens */
+        aspect-ratio: initial; /* Let image height determine aspect ratio on smallest screens */
+    }
+    .col-lg-4 { /* Target the columns used in skills section */
+        width: 100%;
+    }
+}
