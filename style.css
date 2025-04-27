@@ -51,11 +51,16 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Adjusted hover color to match new theme */
-.nav-link:hover,
-.nav-link.active {
+/* Adjusted hover color */
+.nav-link:hover {
     color: #01686d !important; /* Dark Teal accent color */
 }
+
+/* UPDATED Active nav link color */
+.nav-link.active {
+    color: #95FFFF !important; /* New light cyan color */
+}
+
 
 .resume-link {
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -75,7 +80,6 @@ body {
 /* --- Home/Hero Section --- */
 .hero-section {
     min-height: 100vh;
-    /* UPDATED GRADIENT: Using the new vertical dark teal/blue gradient */
     background-color: #01686d; /* Fallback color */
     background-image: linear-gradient(180deg, #01686d 0%, #205d7a 50%, #2d4e81 100%);
     color: #ffffff; /* Ensure text color is white for contrast */
