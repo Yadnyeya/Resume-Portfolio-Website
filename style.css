@@ -77,7 +77,7 @@ body {
     background: #74ebd5;  /* fallback for old browsers */
     background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /* Default text color for section (can be overridden) */
-    color: #34495e;
+    color: #2D3D50; /* Default dark color for this section */
     position: relative;
     display: flex;
     align-items: center;
@@ -97,17 +97,18 @@ body {
 .hero-section h1 {
     text-shadow: none;
     /* UPDATED: Dark blue-grey color for name */
-    color: #2c3e50;
+    color: #2D3D50;
 }
 
 .hero-description {
     font-size: 1.1rem;
     font-weight: 400;
     /* UPDATED: Dark blue-grey color for description */
-    color: #34495e;
+    color: #2D3D50;
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0.9; /* Slightly less intense than heading */
 }
 @media (min-width: 992px) {
     .hero-description {
@@ -121,13 +122,15 @@ body {
 .hero-section .contact-info span {
     font-size: 0.95rem;
     /* UPDATED: Dark blue-grey color for contact info */
-    color: #34495e;
+    color: #2D3D50;
     text-decoration: none;
     transition: color 0.3s ease;
+    opacity: 0.85; /* Slightly less intense than heading */
 }
 .hero-section .contact-info a:hover {
-    /* UPDATED: Darker hover color */
-    color: #2c3e50;
+    /* UPDATED: Darker hover color (using same color for simplicity) */
+    color: #2D3D50;
+    opacity: 1; /* Full opacity on hover */
 }
 
 /* --- General Section Styling --- */
