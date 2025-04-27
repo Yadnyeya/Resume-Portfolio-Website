@@ -75,10 +75,9 @@ body {
 /* --- Home/Hero Section --- */
 .hero-section {
     min-height: 100vh;
-    /* UPDATED GRADIENT: Using the new vertical dark teal/blue gradient */
     background-color: #3a8d91; /* Fallback color */
-    background-image: linear-gradient(180deg, #3a8d91 0%, #385986 90%);
-    color: #ffffff; /* Reverted text color to white */
+    background-image: linear-gradient(180deg, #3a8d91 0%, #385986 70%); /* Applied new gradient */
+    color: #2D3D50; /* Default text color for this section */
     position: relative;
     display: flex;
     align-items: center;
@@ -96,18 +95,20 @@ body {
 }
 
 .hero-section h1 {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Re-added subtle shadow */
-    color: #ffffff; /* Ensure heading is white */
+    text-shadow: none; /* Removed shadow for dark text */
+    /* UPDATED: Dark blue-grey color for name */
+    color: #2D3D50;
 }
 
 .hero-description {
     font-size: 1.1rem;
-    font-weight: 300; /* Lighter weight */
-    color: rgba(255, 255, 255, 0.9); /* Light color for readability */
+    font-weight: 300; /* Lighter weight for description */
+    /* UPDATED: Dark blue-grey color for description */
+    color: #2D3D50;
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 1; /* Reset opacity */
+    opacity: 0.9; /* Slightly less intense than heading */
 }
 @media (min-width: 992px) {
     .hero-description {
@@ -120,14 +121,16 @@ body {
 .hero-section .contact-info a,
 .hero-section .contact-info span {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.9); /* Light color */
+    /* UPDATED: Dark blue-grey color for contact info */
+    color: #2D3D50;
     text-decoration: none;
     transition: color 0.3s ease, opacity 0.3s ease;
-    opacity: 1; /* Reset opacity */
+    opacity: 0.85; /* Slightly less intense than heading */
 }
 .hero-section .contact-info a:hover {
-    color: #ffffff; /* White hover */
-    opacity: 1;
+    /* UPDATED: Darker hover color (using same color for simplicity) */
+    color: #2D3D50;
+    opacity: 1; /* Full opacity on hover */
 }
 
 /* --- General Section Styling --- */
