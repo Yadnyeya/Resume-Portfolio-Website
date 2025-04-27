@@ -33,6 +33,13 @@ body {
     transform: translateY(0);
 }
 
+/* Define the gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 
 /* --- Navigation Bar --- */
 .navbar {
@@ -54,7 +61,7 @@ body {
 /* Adjusted hover color to match new theme */
 .nav-link:hover,
 .nav-link.active {
-    color: #5FCAB8 !important; /* Darker Teal accent color */
+    color: #05676E !important; /* Dark Teal accent color */
 }
 
 .resume-link {
@@ -75,10 +82,11 @@ body {
 /* --- Home/Hero Section --- */
 .hero-section {
     min-height: 100vh;
-    /* UPDATED GRADIENT: Darker version of the requested gradient */
-    background: #8A94C4;  /* fallback for old browsers */
-    background: linear-gradient(to right, #8A94C4, #5FCAB8); /* Darker Purple/Blue to Darker Teal */
-    color: #ffffff; /* Changed text color back to white for contrast */
+    /* UPDATED GRADIENT: Using the new dark animated gradient */
+    background: linear-gradient(135deg, #05676E, #1B5D74, #2C4F80);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #ffffff; /* Reverted text color to white */
     position: relative;
     display: flex;
     align-items: center;
@@ -86,18 +94,17 @@ body {
     padding: 6rem 1rem;
 }
 
-/* Updated profile picture styles */
 .profile-picture {
-    max-width: 500px; /* Increased max-width substantially */
+    max-width: 350px;
     width: 100%;
     height: auto;
     border-radius: 8px !important;
-    border: 5px solid rgba(255, 255, 255, 0.6); /* Slightly less transparent border */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25); /* Slightly stronger shadow */
+    border: 5px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 }
 
 .hero-section h1 {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Re-added subtle shadow for white text */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Re-added subtle shadow */
     color: #ffffff; /* Ensure heading is white */
 }
 
@@ -135,7 +142,7 @@ section {
 
 .section-title {
     font-weight: 700;
-    color: #737db8; /* Adjusted color (medium purple/blue from new gradient) */
+    color: #1B5D74; /* Adjusted color (medium blue/teal from new gradient) */
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 40px !important;
@@ -146,7 +153,7 @@ section {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #5FCAB8; /* Adjusted color (darker teal from new gradient) */
+    background-color: #05676E; /* Adjusted color (dark teal from new gradient) */
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -154,7 +161,7 @@ section {
 }
 
 .section-title i {
-    color: #5FCAB8; /* Adjusted color */
+    color: #1B5D74; /* Adjusted color */
 }
 
 /* --- Skills Section --- */
@@ -201,7 +208,7 @@ section {
 }
 
 .experience-card {
-    border-left: 4px solid #8A94C4; /* Adjusted color (darker purple/blue from gradient) */
+    border-left: 4px solid #2C4F80; /* Adjusted color (dark blue from gradient) */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -268,7 +275,7 @@ section {
     background-color: #ffffff; /* White background for contrast */
 }
 .course-card {
-    border-left: 4px solid #5FCAB8; /* Adjusted accent color */
+    border-left: 4px solid #05676E; /* Adjusted accent color */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -307,7 +314,7 @@ section {
 /* #projects { background-color: #ffffff; } */ /* Removed background color */
 
 .project-card {
-    border-top: 4px solid #8A94C4; /* Adjusted color */
+    border-top: 4px solid #1B5D74; /* Adjusted color */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -360,13 +367,13 @@ section {
 }
 /* Adjusted primary button color */
 #contact .btn-primary {
-    background-color: #5FCAB8; /* Darker Teal */
-    border-color: #5FCAB8;
-    color: #fff; /* White text for dark button */
+    background-color: #05676E; /* Dark Teal */
+    border-color: #05676E;
+    color: #fff; /* White text */
 }
 #contact .btn-primary:hover {
-    background-color: #4aa999; /* Even darker teal on hover */
-    border-color: #4aa999;
+    background-color: #045055; /* Darker teal on hover */
+    border-color: #045055;
     color: #fff;
 }
 
@@ -403,7 +410,7 @@ footer p {
 /* --- Responsiveness --- */
 @media (max-width: 1199.98px) {
     .profile-picture {
-        max-width: 400px; /* Adjust size for large screens */
+        max-width: 300px;
     }
 }
 
@@ -414,6 +421,7 @@ footer p {
     .hero-section {
         padding: 4rem 1rem;
         text-align: center;
+        background-size: 400% 400%; /* Ensure size is large enough */
     }
     .hero-section h1 {
         font-size: 2.5rem;
@@ -426,7 +434,7 @@ footer p {
     }
     .profile-picture {
         margin-bottom: 1.5rem;
-        max-width: 300px; /* Adjust size for medium screens */
+        max-width: 250px;
     }
     .col-lg-4 { /* Target the columns used in skills section */
         width: 50%;
@@ -444,7 +452,7 @@ footer p {
         margin: 5px 0 !important;
     }
      .profile-picture {
-        max-width: 250px; /* Adjust size for small screens */
+        max-width: 200px;
     }
      /* Adjust project columns for small screens */
      #projects .col-lg-4 {
@@ -466,7 +474,7 @@ footer p {
         font-size: 1.6rem;
     }
      .profile-picture {
-        max-width: 200px; /* Adjust size for extra small screens */
+        max-width: 180px;
         aspect-ratio: initial;
     }
     .col-lg-4 { /* Target the columns used in skills section */
