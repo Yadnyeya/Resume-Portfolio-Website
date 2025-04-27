@@ -33,12 +33,7 @@ body {
     transform: translateY(0);
 }
 
-/* Define the gradient animation */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+/* Removed gradient animation keyframes */
 
 
 /* --- Navigation Bar --- */
@@ -61,7 +56,7 @@ body {
 /* Adjusted hover color to match new theme */
 .nav-link:hover,
 .nav-link.active {
-    color: #05676E !important; /* Dark Teal accent color */
+    color: #3A8D91 !important; /* Dark Teal accent color */
 }
 
 .resume-link {
@@ -82,16 +77,16 @@ body {
 /* --- Home/Hero Section --- */
 .hero-section {
     min-height: 100vh;
-    /* UPDATED GRADIENT: Using the new dark animated gradient */
-    background: linear-gradient(135deg, #05676E, #1B5D74, #2C4F80);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
+    /* UPDATED GRADIENT: Using the new dark teal/blue gradient */
+    background: #1F5C78;  /* fallback (middle color) */
+    background: linear-gradient(135deg, #3A8D91, #1F5C78, #385986); /* Teal -> Dark Blue -> Medium Blue */
     color: #ffffff; /* Reverted text color to white */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 6rem 1rem;
+    /* Removed animation properties */
 }
 
 .profile-picture {
@@ -142,7 +137,7 @@ section {
 
 .section-title {
     font-weight: 700;
-    color: #1B5D74; /* Adjusted color (medium blue/teal from new gradient) */
+    color: #1F5C78; /* Adjusted color (medium blue/teal from new gradient) */
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 40px !important;
@@ -153,7 +148,7 @@ section {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #05676E; /* Adjusted color (dark teal from new gradient) */
+    background-color: #3A8D91; /* Adjusted color (dark teal from new gradient) */
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -161,7 +156,7 @@ section {
 }
 
 .section-title i {
-    color: #1B5D74; /* Adjusted color */
+    color: #3A8D91; /* Adjusted color */
 }
 
 /* --- Skills Section --- */
@@ -208,7 +203,7 @@ section {
 }
 
 .experience-card {
-    border-left: 4px solid #2C4F80; /* Adjusted color (dark blue from gradient) */
+    border-left: 4px solid #385986; /* Adjusted color (medium blue from gradient) */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -275,7 +270,7 @@ section {
     background-color: #ffffff; /* White background for contrast */
 }
 .course-card {
-    border-left: 4px solid #05676E; /* Adjusted accent color */
+    border-left: 4px solid #3A8D91; /* Adjusted accent color */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -314,7 +309,7 @@ section {
 /* #projects { background-color: #ffffff; } */ /* Removed background color */
 
 .project-card {
-    border-top: 4px solid #1B5D74; /* Adjusted color */
+    border-top: 4px solid #1F5C78; /* Adjusted color */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -367,13 +362,13 @@ section {
 }
 /* Adjusted primary button color */
 #contact .btn-primary {
-    background-color: #05676E; /* Dark Teal */
-    border-color: #05676E;
+    background-color: #3A8D91; /* Dark Teal */
+    border-color: #3A8D91;
     color: #fff; /* White text */
 }
 #contact .btn-primary:hover {
-    background-color: #045055; /* Darker teal on hover */
-    border-color: #045055;
+    background-color: #2c7a7e; /* Darker teal on hover */
+    border-color: #2c7a7e;
     color: #fff;
 }
 
@@ -421,7 +416,7 @@ footer p {
     .hero-section {
         padding: 4rem 1rem;
         text-align: center;
-        background-size: 400% 400%; /* Ensure size is large enough */
+        /* background-size: 400% 400%; */ /* Animation removed */
     }
     .hero-section h1 {
         font-size: 2.5rem;
