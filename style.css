@@ -54,7 +54,7 @@ body {
 /* Adjusted hover color to match new theme */
 .nav-link:hover,
 .nav-link.active {
-    color: #3a8d91 !important; /* Dark Teal accent color */
+    color: #01686d !important; /* Dark Teal accent color */
 }
 
 .resume-link {
@@ -75,9 +75,10 @@ body {
 /* --- Home/Hero Section --- */
 .hero-section {
     min-height: 100vh;
-    background-color: #3a8d91; /* Fallback color */
-    background-image: linear-gradient(180deg, #3a8d91 0%, #385986 70%); /* Applied new gradient */
-    color: #2D3D50; /* Default text color for this section */
+    /* UPDATED GRADIENT: Using the new vertical dark teal/blue gradient */
+    background-color: #01686d; /* Fallback color */
+    background-image: linear-gradient(180deg, #01686d 0%, #205d7a 50%, #2d4e81 100%);
+    color: #ffffff; /* Ensure text color is white for contrast */
     position: relative;
     display: flex;
     align-items: center;
@@ -95,20 +96,18 @@ body {
 }
 
 .hero-section h1 {
-    text-shadow: none; /* Removed shadow for dark text */
-    /* UPDATED: Dark blue-grey color for name */
-    color: #2D3D50;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    color: #ffffff; /* Ensure heading is white */
 }
 
 .hero-description {
     font-size: 1.1rem;
-    font-weight: 300; /* Lighter weight for description */
-    /* UPDATED: Dark blue-grey color for description */
-    color: #2D3D50;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9); /* Light color for readability */
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.9; /* Slightly less intense than heading */
+    opacity: 1;
 }
 @media (min-width: 992px) {
     .hero-description {
@@ -121,16 +120,14 @@ body {
 .hero-section .contact-info a,
 .hero-section .contact-info span {
     font-size: 0.95rem;
-    /* UPDATED: Dark blue-grey color for contact info */
-    color: #2D3D50;
+    color: rgba(255, 255, 255, 0.9); /* Light color */
     text-decoration: none;
     transition: color 0.3s ease, opacity 0.3s ease;
-    opacity: 0.85; /* Slightly less intense than heading */
+    opacity: 1;
 }
 .hero-section .contact-info a:hover {
-    /* UPDATED: Darker hover color (using same color for simplicity) */
-    color: #2D3D50;
-    opacity: 1; /* Full opacity on hover */
+    color: #ffffff; /* White hover */
+    opacity: 1;
 }
 
 /* --- General Section Styling --- */
@@ -140,7 +137,7 @@ section {
 
 .section-title {
     font-weight: 700;
-    color: #385986; /* Adjusted color (medium blue from new gradient) */
+    color: #205d7a; /* Adjusted color (medium blue/teal from new gradient) */
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 40px !important;
@@ -151,7 +148,7 @@ section {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #3a8d91; /* Adjusted color (dark teal from new gradient) */
+    background-color: #01686d; /* Adjusted color (dark teal from new gradient) */
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -159,7 +156,7 @@ section {
 }
 
 .section-title i {
-    color: #3a8d91; /* Adjusted color */
+    color: #01686d; /* Adjusted color */
 }
 
 /* --- Skills Section --- */
@@ -206,7 +203,7 @@ section {
 }
 
 .experience-card {
-    border-left: 4px solid #385986; /* Adjusted color */
+    border-left: 4px solid #2d4e81; /* Adjusted color (dark blue from gradient) */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -273,7 +270,7 @@ section {
     background-color: #ffffff; /* White background for contrast */
 }
 .course-card {
-    border-left: 4px solid #3a8d91; /* Adjusted accent color */
+    border-left: 4px solid #01686d; /* Adjusted accent color */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -312,7 +309,7 @@ section {
 /* #projects { background-color: #ffffff; } */ /* Removed background color */
 
 .project-card {
-    border-top: 4px solid #385986; /* Adjusted color */
+    border-top: 4px solid #205d7a; /* Adjusted color */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-radius: 8px;
 }
@@ -365,13 +362,13 @@ section {
 }
 /* Adjusted primary button color */
 #contact .btn-primary {
-    background-color: #3A8D91; /* Dark Teal */
-    border-color: #3A8D91;
+    background-color: #01686d; /* Dark Teal */
+    border-color: #01686d;
     color: #fff; /* White text */
 }
 #contact .btn-primary:hover {
-    background-color: #2c7a7e; /* Darker teal on hover */
-    border-color: #2c7a7e;
+    background-color: #015054; /* Darker teal on hover */
+    border-color: #015054;
     color: #fff;
 }
 
