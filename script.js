@@ -3,6 +3,23 @@
 // Wait for the DOM to be fully loaded before running scripts
 document.addEventListener('DOMContentLoaded', function() {
 
+    // --- Scroll Progress Indicator ---
+    function updateProgressIndicator() {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        
+        let progressBar = document.querySelector('.progress-indicator');
+        if (!progressBar) {
+            progressBar = document.createElement('div');
+            progressBar.className = 'progress-indicator';
+            document.body.appendChild(progressBar);
+        }
+        progressBar.style.width = scrollPercent + '%';
+    }
+
+    window.addEventListener('scroll', updateProgressIndicator);
+
     // --- Navbar Shrink Function ---
     // Adds/removes a class to the navbar when scrolling
     var navbarShrink = function () {
@@ -127,6 +144,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start observing each fade-in element
     fadeInElements.forEach(el => {
         observer.observe(el);
+    });
+
+    // --- Type Writer Effect for Hero Section ---
+    function typeWriter(element, text, speed = 50) {
+        let i = 0;
+        element.innerHTML = '';
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        type();
+    }
+
+    // Apply typewriter effect to hero description
+    const heroDesc = document.querySelector('.hero-description');
+    if (heroDesc) {
+        const originalText = heroDesc.textContent;
+        setTimeout(() => {
+            typeWriter(heroDesc, originalText, 30);
+        }, 1000);
+    }
+
+    // --- Enhanced Loading Animation ---
+    window.addEventListener('load', () => {
+        document.body.classList.add('loaded');
+        // Add initial animation class to hero section
+        const heroFadeIn = document.querySelector('#home .fade-in');
+        if (heroFadeIn) {
+            heroFadeIn.classList.add('initial');
+        }
     });
 
 }); // End of DOMContentLoaded 

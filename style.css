@@ -2,6 +2,24 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8f9fa; /* Light grey background for main content */
+    line-height: 1.6;
+}
+
+/* Skip link styling */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 9999;
+    border-radius: 0 0 8px 8px;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 /* Hero Section Styling */
@@ -56,6 +74,14 @@ body {
     font-size: 0.85rem;
     font-weight: 400;
     padding: 0.5em 0.9em;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.skill-category .badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    background-color: #4ca1af !important;
+    color: white !important;
 }
 .skill-subcategory-title {
     font-weight: 600;
@@ -94,6 +120,17 @@ body {
 /* Fade-in Animation */
 .fade-in {
     opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Initial page load animation */
+.fade-in.initial {
     animation: fadeInAnimation 1s ease-in-out forwards;
 }
 
@@ -108,6 +145,31 @@ body {
     }
 }
 
+/* Progress indicator */
+.progress-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(to right, #4ca1af, #2c3e50);
+    z-index: 9999;
+    transition: width 0.3s ease;
+}
+
+/* Enhanced button styles */
+.btn-primary {
+    background: linear-gradient(135deg, #4ca1af, #2c3e50);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 161, 175, 0.4);
+}
+
 /* Ensure main content doesn't overlap header */
 main {
     position: relative;
@@ -118,4 +180,58 @@ main {
 /* Specific background for sections that need it */
 #experience, #contact, #accomplishments {
     background-color: #f8f9fa;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 8rem 0 6rem;
+        min-height: 90vh;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .contact-info {
+        font-size: 0.85rem;
+        line-height: 1.8;
+    }
+    
+    .contact-info a, .contact-info span {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .skill-category .badge {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 7rem 0 5rem;
+    }
+    
+    .display-3 {
+        font-size: 2rem;
+    }
+    
+    .profile-picture {
+        max-width: 200px;
+        margin: 0 auto 2rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
 }
