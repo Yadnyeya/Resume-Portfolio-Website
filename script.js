@@ -146,29 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // --- Type Writer Effect for Hero Section ---
-    function typeWriter(element, text, speed = 50) {
-        let i = 0;
-        element.innerHTML = '';
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        type();
-    }
-
-    // Apply typewriter effect to hero description
-    const heroDesc = document.querySelector('.hero-description');
-    if (heroDesc) {
-        const originalText = heroDesc.textContent;
-        setTimeout(() => {
-            typeWriter(heroDesc, originalText, 30);
-        }, 1000);
-    }
-
     // --- Enhanced Loading Animation ---
     window.addEventListener('load', () => {
         document.body.classList.add('loaded');
