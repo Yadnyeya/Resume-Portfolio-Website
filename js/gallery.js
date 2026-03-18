@@ -1,5 +1,8 @@
 // Gallery and Modal Functionality
 
+let modalImageGroup = [];
+let modalCurrentIndex = -1;
+
 // Modal Management
 function openImageModal(imgElement) {
     // Create modal if it doesn't exist
@@ -9,17 +12,74 @@ function openImageModal(imgElement) {
         modal = document.getElementById('imageModal');
     }
     
-    // Set modal image source and alt text
-    const modalImg = modal.querySelector('#modalImage');
-    const modalTitle = modal.querySelector('.modal-title');
-    
-    modalImg.src = imgElement.src;
-    modalImg.alt = imgElement.alt;
-    modalTitle.textContent = imgElement.alt;
+    // Build a navigable group from the same project gallery when possible
+    modalImageGroup = getModalImageGroup(imgElement);
+    modalCurrentIndex = modalImageGroup.indexOf(imgElement);
+
+    if (modalCurrentIndex === -1) {
+        modalImageGroup = [imgElement];
+        modalCurrentIndex = 0;
+    }
+
+    updateModalImage();
     
     // Show the modal
     const bootstrapModal = new bootstrap.Modal(modal);
     bootstrapModal.show();
+}
+
+function getModalImageGroup(imgElement) {
+    const projectGallery = imgElement.closest('.project-gallery');
+
+    if (projectGallery) {
+        return Array.from(projectGallery.querySelectorAll('img[onclick*="openImageModal"]'));
+    }
+
+    return Array.from(document.querySelectorAll('img[onclick*="openImageModal"]'));
+}
+
+function updateModalImage() {
+    const modal = document.getElementById('imageModal');
+    if (!modal || modalCurrentIndex < 0 || modalCurrentIndex >= modalImageGroup.length) {
+        return;
+    }
+
+    const currentImage = modalImageGroup[modalCurrentIndex];
+    const modalImg = modal.querySelector('#modalImage');
+    const modalTitle = modal.querySelector('.modal-title');
+    const modalCounter = modal.querySelector('#modalImageCounter');
+    const prevBtn = modal.querySelector('#modalPrevBtn');
+    const nextBtn = modal.querySelector('#modalNextBtn');
+
+    modalImg.src = currentImage.src;
+    modalImg.alt = currentImage.alt;
+    modalTitle.textContent = currentImage.alt || 'Image View';
+
+    const hasMultipleImages = modalImageGroup.length > 1;
+    const displayStyle = hasMultipleImages ? 'flex' : 'none';
+
+    prevBtn.style.display = displayStyle;
+    nextBtn.style.display = displayStyle;
+    modalCounter.style.display = hasMultipleImages ? 'inline-block' : 'none';
+    modalCounter.textContent = `${modalCurrentIndex + 1} of ${modalImageGroup.length}`;
+}
+
+function showPreviousModalImage() {
+    if (modalImageGroup.length < 2) {
+        return;
+    }
+
+    modalCurrentIndex = (modalCurrentIndex - 1 + modalImageGroup.length) % modalImageGroup.length;
+    updateModalImage();
+}
+
+function showNextModalImage() {
+    if (modalImageGroup.length < 2) {
+        return;
+    }
+
+    modalCurrentIndex = (modalCurrentIndex + 1) % modalImageGroup.length;
+    updateModalImage();
 }
 
 function createImageModal() {
@@ -31,8 +91,17 @@ function createImageModal() {
                         <h5 class="modal-title" id="imageModalLabel">Image View</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-center">
+                    <div class="modal-body text-center position-relative">
+                        <button id="modalPrevBtn" type="button" class="btn btn-dark position-absolute top-50 start-0 translate-middle-y ms-2" style="display: none; z-index: 2;" onclick="showPreviousModalImage()" aria-label="Previous image">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
                         <img id="modalImage" class="img-fluid" alt="Enlarged view">
+                        <button id="modalNextBtn" type="button" class="btn btn-dark position-absolute top-50 end-0 translate-middle-y me-2" style="display: none; z-index: 2;" onclick="showNextModalImage()" aria-label="Next image">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="mt-3">
+                            <span id="modalImageCounter" class="badge bg-secondary" style="display: none;"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -480,6 +549,18 @@ document.addEventListener('keydown', function(event) {
         }
         if (dashboardModal && dashboardModal.classList.contains('show')) {
             bootstrap.Modal.getInstance(dashboardModal).hide();
+        }
+    }
+
+    if (imageModal && imageModal.classList.contains('show')) {
+        if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            showPreviousModalImage();
+        }
+
+        if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            showNextModalImage();
         }
     }
 });

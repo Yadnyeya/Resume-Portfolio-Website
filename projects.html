@@ -62,150 +62,8 @@
     </section>
 
     <main id="main-content">
-        <!-- Featured Project -->
         <section class="py-5">
             <div class="container fade-in">
-                <div class="text-center mb-5">
-                    <h2 class="section-title">
-                        <i class="fas fa-star text-warning me-2"></i>Featured Project
-                    </h2>
-                </div>
-
-                <!-- FolioLab Project -->
-                <div class="row justify-content-center mb-4">
-                    <div class="col-lg-10">
-                        <div class="card shadow-lg project-card border-primary">
-                            <div class="card-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="project-icon bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                        <i class="fas fa-chart-line fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="card-title mb-1 text-primary">FolioLab – AI-Powered Stock Prediction Platform</h3>
-                                        <p class="text-muted mb-0">Advanced Machine Learning • Cloud Architecture • Financial Analytics</p>
-                                    </div>
-                                </div>
-                                
-                                <p class="text-muted small tools-used mb-3">
-                                    <i class="fas fa-wrench me-1 opacity-75"></i> 
-                                    <strong>Technology Stack:</strong> AWS (API Gateway, Lambda, DynamoDB, S3, CloudFront), React + D3.js, Python (XGBoost, LSTM, GRU, Transformers), Interactive Brokers API
-                                </p>
-                                
-                                <div class="mb-4">
-                                    <h5 class="text-primary mb-3">Key Features & Achievements</h5>
-                                    <ul class="card-text">
-                                        <li>Built a cloud-native ML platform benchmarking <strong>9 advanced algorithms</strong> (Logistic Regression, SVM, Decision Trees, Random Forest, XGBoost, Neural Networks) to forecast stock price direction with <strong>62-73% accuracy</strong></li>
-                                        <li>Integrated <strong>23+ technical indicators</strong> (RSI, MACD, Bollinger Bands, ADX, volatility & momentum measures) with ensemble voting models and time-series validation for robust, leak-free predictions</li>
-                                        <li>Developed interactive React + D3.js dashboard with customizable layouts, live charts, backtesting suite with portfolio simulation, and transaction cost modeling</li>
-                                        <li>Implemented automated trading integration via Interactive Brokers API for paper trading, live alerts, and portfolio rebalancing with enterprise features like REST API access and multi-tenant user management</li>
-                                        <li>Deployed on AWS serverless infrastructure delivering institutional-quality prediction tools with AutoML, deep learning models, and alternative data integration (news & sentiment analysis)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- FolioLab Interactive Gallery -->
-            <div class="container mb-5 fade-in">
-                <div class="project-gallery">
-                    <div class="gallery-container">
-                        <h4 class="gallery-title">
-                            <i class="fas fa-images me-2"></i>FolioLab Project Gallery
-                        </h4>
-                        
-                        <!-- Bootstrap Carousel -->
-                        <div id="foliolabCarousel" class="carousel slide project-carousel" data-bs-ride="false">
-                            <!-- Indicators -->
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Architecture Overview"></button>
-                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="1" aria-label="ML Pipeline"></button>
-                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="2" aria-label="Portfolio Dashboard"></button>
-                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="3" aria-label="Trading Interface"></button>
-                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="4" aria-label="Horizon Chart"></button>
-                            </div>
-                            
-                            <!-- Slides -->
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/FolioLab.png" class="d-block w-100" alt="FolioLab Architecture" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>Cloud Infrastructure Design</strong><br>
-                                        AWS serverless architecture with API Gateway, Lambda, DynamoDB, and S3 integration
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/Python System Architecture.png" class="d-block w-100" alt="ML Pipeline Architecture" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>ML Pipeline Architecture</strong><br>
-                                        Data processing, feature engineering, and model training components
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/Portfolio 1.png" class="d-block w-100" alt="Portfolio Dashboard" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>Portfolio Analytics Dashboard</strong><br>
-                                        Main analytics interface with performance metrics and risk analysis
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/Portfolio 2.png" class="d-block w-100" alt="Trading Interface" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>Advanced Trading Interface</strong><br>
-                                        Interactive trading dashboard with real-time market data
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/Horizon Chart.png" class="d-block w-100" alt="Horizon Chart" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>Time Series Analysis Visualization</strong><br>
-                                        Horizon chart displaying temporal patterns in financial data
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Controls -->
-                            <button class="carousel-control-prev" type="button" data-bs-target="#foliolabCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#foliolabCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                        
-                        <!-- Gallery Navigation -->
-                        <div class="gallery-nav">
-                            <div class="gallery-counter">
-                                <span id="foliolab-current">1</span> of <span id="foliolab-total">5</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Thumbnail Gallery -->
-                        <div class="thumbnail-gallery">
-                            <img src="images/FolioLab.png" class="thumbnail active" onclick="goToSlide('foliolabCarousel', 0)" alt="Architecture">
-                            <img src="images/Python System Architecture.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 1)" alt="ML Pipeline">
-                            <img src="images/Portfolio 1.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 2)" alt="Dashboard">
-                            <img src="images/Portfolio 2.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 3)" alt="Trading">
-                            <img src="images/Horizon Chart.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 4)" alt="Chart">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Other Projects -->
-        <section class="py-5 bg-light">
-            <div class="container fade-in">
-                <div class="text-center mb-5">
-                    <h2 class="section-title">
-                        <i class="fas fa-project-diagram text-info me-2"></i>Additional Projects
-                    </h2>
-                    <p class="text-muted">Diverse portfolio showcasing data analytics, cloud solutions, and business intelligence</p>
-                </div>
-
                 <!-- My Quant Project -->
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-10">
@@ -342,6 +200,134 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- FolioLab Project -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-10">
+                        <div class="card shadow-lg project-card border-primary">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="project-icon bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-chart-line fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="card-title mb-1 text-primary">FolioLab – AI-Powered Stock Prediction Platform</h3>
+                                        <p class="text-muted mb-0">Advanced Machine Learning • Cloud Architecture • Financial Analytics</p>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-muted small tools-used mb-3">
+                                    <i class="fas fa-wrench me-1 opacity-75"></i> 
+                                    <strong>Technology Stack:</strong> AWS (API Gateway, Lambda, DynamoDB, S3, CloudFront), React + D3.js, Python (XGBoost, LSTM, GRU, Transformers), Interactive Brokers API
+                                </p>
+                                
+                                <div class="mb-4">
+                                    <h5 class="text-primary mb-3">Key Features & Achievements</h5>
+                                    <ul class="card-text">
+                                        <li>Built a cloud-native ML platform benchmarking <strong>9 advanced algorithms</strong> (Logistic Regression, SVM, Decision Trees, Random Forest, XGBoost, Neural Networks) to forecast stock price direction with <strong>62-73% accuracy</strong></li>
+                                        <li>Integrated <strong>23+ technical indicators</strong> (RSI, MACD, Bollinger Bands, ADX, volatility & momentum measures) with ensemble voting models and time-series validation for robust, leak-free predictions</li>
+                                        <li>Developed interactive React + D3.js dashboard with customizable layouts, live charts, backtesting suite with portfolio simulation, and transaction cost modeling</li>
+                                        <li>Implemented automated trading integration via Interactive Brokers API for paper trading, live alerts, and portfolio rebalancing with enterprise features like REST API access and multi-tenant user management</li>
+                                        <li>Deployed on AWS serverless infrastructure delivering institutional-quality prediction tools with AutoML, deep learning models, and alternative data integration (news & sentiment analysis)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FolioLab Interactive Gallery -->
+            <div class="container mb-5 fade-in">
+                <div class="project-gallery">
+                    <div class="gallery-container">
+                        <h4 class="gallery-title">
+                            <i class="fas fa-images me-2"></i>FolioLab Project Gallery
+                        </h4>
+                        
+                        <!-- Bootstrap Carousel -->
+                        <div id="foliolabCarousel" class="carousel slide project-carousel" data-bs-ride="false">
+                            <!-- Indicators -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Architecture Overview"></button>
+                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="1" aria-label="ML Pipeline"></button>
+                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="2" aria-label="Portfolio Dashboard"></button>
+                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="3" aria-label="Trading Interface"></button>
+                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="4" aria-label="Horizon Chart"></button>
+                            </div>
+                            
+                            <!-- Slides -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/FolioLab.png" class="d-block w-100" alt="FolioLab Architecture" onclick="openImageModal(this)">
+                                    <div class="image-caption">
+                                        <strong>Cloud Infrastructure Design</strong><br>
+                                        AWS serverless architecture with API Gateway, Lambda, DynamoDB, and S3 integration
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Python System Architecture.png" class="d-block w-100" alt="ML Pipeline Architecture" onclick="openImageModal(this)">
+                                    <div class="image-caption">
+                                        <strong>ML Pipeline Architecture</strong><br>
+                                        Data processing, feature engineering, and model training components
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Portfolio 1.png" class="d-block w-100" alt="Portfolio Dashboard" onclick="openImageModal(this)">
+                                    <div class="image-caption">
+                                        <strong>Portfolio Analytics Dashboard</strong><br>
+                                        Main analytics interface with performance metrics and risk analysis
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Portfolio 2.png" class="d-block w-100" alt="Trading Interface" onclick="openImageModal(this)">
+                                    <div class="image-caption">
+                                        <strong>Advanced Trading Interface</strong><br>
+                                        Interactive trading dashboard with real-time market data
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Horizon Chart.png" class="d-block w-100" alt="Horizon Chart" onclick="openImageModal(this)">
+                                    <div class="image-caption">
+                                        <strong>Time Series Analysis Visualization</strong><br>
+                                        Horizon chart displaying temporal patterns in financial data
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#foliolabCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#foliolabCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Gallery Navigation -->
+                        <div class="gallery-nav">
+                            <div class="gallery-counter">
+                                <span id="foliolab-current">1</span> of <span id="foliolab-total">5</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Thumbnail Gallery -->
+                        <div class="thumbnail-gallery">
+                            <img src="images/FolioLab.png" class="thumbnail active" onclick="goToSlide('foliolabCarousel', 0)" alt="Architecture">
+                            <img src="images/Python System Architecture.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 1)" alt="ML Pipeline">
+                            <img src="images/Portfolio 1.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 2)" alt="Dashboard">
+                            <img src="images/Portfolio 2.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 3)" alt="Trading">
+                            <img src="images/Horizon Chart.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 4)" alt="Chart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container fade-in">
 
                 <!-- Real Estate Analysis Project -->
                 <div class="row justify-content-center mb-5">
