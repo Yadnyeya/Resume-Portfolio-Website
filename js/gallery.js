@@ -76,6 +76,9 @@ function updateGalleryCounter(carouselId, currentSlide) {
         case 'ecommerceCarousel':
             counterId = 'ecommerce-current';
             break;
+        case 'myquantCarousel':
+            counterId = 'myquant-current';
+            break;
         case 'additionalCarousel':
             counterId = 'additional-current';
             break;
@@ -438,7 +441,7 @@ function forceHideLoading() {
 // Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize carousel event listeners for all carousels
-    const carousels = ['foliolabCarousel', 'realestateCarousel', 'ecommerceCarousel', 'additionalCarousel'];
+    const carousels = ['foliolabCarousel', 'realestateCarousel', 'ecommerceCarousel', 'myquantCarousel', 'additionalCarousel'];
     
     carousels.forEach(carouselId => {
         const carouselElement = document.getElementById(carouselId);
