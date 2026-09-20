@@ -1,703 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio Projects - Yadnyeya Vairat's data analytics and technology projects showcasing AI, financial modeling, and cloud solutions.">
-    <meta name="keywords" content="Projects, AI, Machine Learning, Data Analytics, AWS, Python, Financial Technology">
-    <meta name="author" content="Yadnyeya Vairat">
-    <title>Projects | Yadnyeya Vairat Portfolio</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Quantitative research projects by Yadnyeya Vairat: C++ market making and adverse selection, options pricing and volatility surfaces, cross-asset futures statistical arbitrage, and an AI-operated systematic trading platform.">
+<meta name="keywords" content="market making, adverse selection, limit order book, options pricing, volatility surface, statistical arbitrage, cointegration, Ornstein-Uhlenbeck, backtesting, C++, Python">
+<meta name="author" content="Yadnyeya Vairat">
+<title>Research &amp; Projects — Yadnyeya Vairat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Skip link for accessibility -->
-    <a href="#main-content" class="skip-link visually-hidden-focusable">Skip to main content</a>
+<a class="skip" href="#main">Skip to main content</a>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Yadnyeya Vairat</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link resume-link" href="Resume.pdf" target="_blank">
-                           <i class="fas fa-download me-1"></i> Resume
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<nav class="nav">
+  <div class="wrap nav__in">
+    <a class="nav__brand" href="index.html"><span class="nav__tick">YV</span> Yadnyeya Vairat</a>
+    <button class="nav__burger" type="button" aria-expanded="false" aria-controls="navlinks">menu</button>
+    <ul class="nav__links" id="navlinks">
+      <li><a href="index.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a class="nav__cv" href="Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section class="sec sec--tight" style="border-top:0">
+    <div class="wrap">
+      <div class="ledger">
+        <div class="ledger__rail"><span class="label">research</span></div>
+        <div>
+          <h2>Four studies, built to be falsifiable.</h2>
+          <p class="dim" style="margin-top:14px;max-width:64ch">Each one starts with a question a desk would actually ask, ends with a number that could have come back negative, and several did. The interesting part is usually what survived the costs.</p>
         </div>
-    </nav>
+      </div>
+    </div>
+  </section>
 
-    <!-- Page Header -->
-    <section class="page-header bg-gradient-primary text-white py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="display-4 fw-bold mb-3">Portfolio Projects</h1>
-                    <p class="lead mb-0">
-                        Innovative solutions at the intersection of finance, data science, and cloud technology - 
-                        from AI-powered trading platforms to comprehensive analytics dashboards.
-                    </p>
-                </div>
-                <div class="col-lg-4 text-end">
-                    <i class="fas fa-rocket fa-5x opacity-25"></i>
-                </div>
-            </div>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+
+      <!-- 1 -->
+      <article class="proj reveal" id="market-making">
+        <div class="proj__top">
+          <div>
+            <span class="proj__kind">market microstructure</span>
+            <p class="role__where">C++ &middot; simulation</p>
+          </div>
+          <div>
+            <h3>Market Making &amp; Adverse Selection Strategy</h3>
+            <ul class="bul">
+              <li>Designed a C++ limit order book market maker providing continuous two-sided liquidity around fair value, simulating fills and spread capture.</li>
+              <li>Implemented inventory-aware quoting with volatility-adaptive spreads, skewing prices and sizes using <strong>microprice</strong> and <strong>order-flow-imbalance</strong> signals to control directional exposure and inventory risk.</li>
+              <li>Benchmarked fixed, inventory-aware, and signal-driven quoting across <strong>100,000+ simulated fills</strong>, using 10-second markouts and inventory variance to quantify the adverse-selection tradeoff.</li>
+            </ul>
+          </div>
         </div>
-    </section>
-
-    <main id="main-content">
-        <section class="py-5">
-            <div class="container fade-in">
-                <!-- My Quant Project -->
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-10">
-                        <div class="card shadow-sm project-card border-primary">
-                            <div class="card-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="project-icon bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                        <i class="fas fa-chart-line"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="card-title mb-1 text-primary">My Quant - AI-Powered Stock Portfolio Optimizer &amp; Prediction Platform</h4>
-                                        <p class="text-muted mb-0">Quantitative Finance • AI Engineering • Full-Stack Platform</p>
-                                    </div>
-                                </div>
-                                <p class="text-muted small tools-used mb-3">
-                                    <i class="fas fa-wrench me-1 opacity-75"></i>
-                                    <strong>Technology Stack:</strong> React 19 + TypeScript, FastAPI (Python 3.13), PostgreSQL 16, Redis 7, Docker, Anthropic Claude API (Haiku &amp; Sonnet), Yahoo Finance API, Alembic, JWT Auth, Vite 7, MUI 7, TanStack Query, Zustand, Plotly.js, Monaco Editor
-                                </p>
-                                <h5 class="text-primary mb-3">Key Features &amp; Achievements</h5>
-                                <ul class="card-text">
-                                    <li>Built a full-stack quantitative platform benchmarking <strong>9 ML algorithms</strong> (Random Forest, XGBoost, LightGBM, SVM, Ensemble Voting) to forecast stock price direction with <strong>62-73% accuracy</strong></li>
-                                    <li>Integrated <strong>23+ technical indicators</strong> with SHAP-based model explainability (waterfall, force, and summary plots) on a multi-horizon prediction engine spanning 1-30 day forecasts</li>
-                                    <li>Developed AI Fundamental Analysis suite with <strong>25 one-click professional tools</strong> (DCF, comps, earnings, ratios) and a Claude Sonnet chatbot with persistent conversation history</li>
-                                    <li>Built a strategy backtesting engine converting natural language to executable Python via Claude, with configurable indicators, trade log, and Sharpe/drawdown reporting</li>
-                                    <li>Implemented advanced portfolio optimization using Mean-Variance, Risk Parity, HRP, and Black-Litterman with efficient frontier, Monte Carlo simulation, and VaR analytics</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- My Quant Project Gallery -->
-                <div class="container mb-5">
-                    <div class="project-gallery">
-                        <div class="gallery-container">
-                            <h4 class="gallery-title">
-                                <i class="fas fa-images me-2"></i>My Quant Project Gallery
-                            </h4>
-
-                            <!-- Bootstrap Carousel -->
-                            <div id="myquantCarousel" class="carousel slide project-carousel" data-bs-ride="false">
-                                <!-- Indicators -->
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#myquantCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="My Quant Dashboard 1"></button>
-                                    <button type="button" data-bs-target="#myquantCarousel" data-bs-slide-to="1" aria-label="My Quant Dashboard 2"></button>
-                                    <button type="button" data-bs-target="#myquantCarousel" data-bs-slide-to="2" aria-label="My Quant Dashboard 3"></button>
-                                    <button type="button" data-bs-target="#myquantCarousel" data-bs-slide-to="3" aria-label="My Quant Dashboard 4"></button>
-                                    <button type="button" data-bs-target="#myquantCarousel" data-bs-slide-to="4" aria-label="My Quant Dashboard 5"></button>
-                                    <button type="button" data-bs-target="#myquantCarousel" data-bs-slide-to="5" aria-label="My Quant Dashboard 6"></button>
-                                    <button type="button" data-bs-target="#myquantCarousel" data-bs-slide-to="6" aria-label="My Quant Dashboard 7"></button>
-                                </div>
-
-                                <!-- Slides -->
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="images/My Quant 1.png" class="d-block w-100" alt="My Quant Dashboard 1" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>My Quant Interface 1</strong><br>
-                                            AI-powered portfolio and prediction platform view
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/My Quant 2.png" class="d-block w-100" alt="My Quant Dashboard 2" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>My Quant Interface 2</strong><br>
-                                            Advanced analytics and prediction workflow
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/My Quant 3.png" class="d-block w-100" alt="My Quant Dashboard 3" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>My Quant Interface 3</strong><br>
-                                            Technical indicators and model insights
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/My Quant 4.png" class="d-block w-100" alt="My Quant Dashboard 4" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>My Quant Interface 4</strong><br>
-                                            Portfolio optimization and risk analytics
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/My Quant 5.png" class="d-block w-100" alt="My Quant Dashboard 5" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>My Quant Interface 5</strong><br>
-                                            Backtesting engine and strategy reporting
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/My Quant 6.png" class="d-block w-100" alt="My Quant Dashboard 6" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>My Quant Interface 6</strong><br>
-                                            Fundamental analysis toolkit and chatbot workflow
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/My Quant 7.png" class="d-block w-100" alt="My Quant Dashboard 7" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>My Quant Interface 7</strong><br>
-                                            End-to-end quant research and execution dashboard
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Controls -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#myquantCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#myquantCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-
-                            <!-- Gallery Navigation -->
-                            <div class="gallery-nav">
-                                <div class="gallery-counter">
-                                    <span id="myquant-current">1</span> of <span id="myquant-total">7</span>
-                                </div>
-                            </div>
-
-                            <!-- Thumbnail Gallery -->
-                            <div class="thumbnail-gallery">
-                                <img src="images/My Quant 1.png" class="thumbnail active" onclick="goToSlide('myquantCarousel', 0)" alt="My Quant 1">
-                                <img src="images/My Quant 2.png" class="thumbnail" onclick="goToSlide('myquantCarousel', 1)" alt="My Quant 2">
-                                <img src="images/My Quant 3.png" class="thumbnail" onclick="goToSlide('myquantCarousel', 2)" alt="My Quant 3">
-                                <img src="images/My Quant 4.png" class="thumbnail" onclick="goToSlide('myquantCarousel', 3)" alt="My Quant 4">
-                                <img src="images/My Quant 5.png" class="thumbnail" onclick="goToSlide('myquantCarousel', 4)" alt="My Quant 5">
-                                <img src="images/My Quant 6.png" class="thumbnail" onclick="goToSlide('myquantCarousel', 5)" alt="My Quant 6">
-                                <img src="images/My Quant 7.png" class="thumbnail" onclick="goToSlide('myquantCarousel', 6)" alt="My Quant 7">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FolioLab Project -->
-                <div class="row justify-content-center mb-4">
-                    <div class="col-lg-10">
-                        <div class="card shadow-lg project-card border-primary">
-                            <div class="card-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="project-icon bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                        <i class="fas fa-chart-line fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="card-title mb-1 text-primary">FolioLab – AI-Powered Stock Prediction Platform</h3>
-                                        <p class="text-muted mb-0">Advanced Machine Learning • Cloud Architecture • Financial Analytics</p>
-                                    </div>
-                                </div>
-                                
-                                <p class="text-muted small tools-used mb-3">
-                                    <i class="fas fa-wrench me-1 opacity-75"></i> 
-                                    <strong>Technology Stack:</strong> AWS (API Gateway, Lambda, DynamoDB, S3, CloudFront), React + D3.js, Python (XGBoost, LSTM, GRU, Transformers), Interactive Brokers API
-                                </p>
-                                
-                                <div class="mb-4">
-                                    <h5 class="text-primary mb-3">Key Features & Achievements</h5>
-                                    <ul class="card-text">
-                                        <li>Built a cloud-native ML platform benchmarking <strong>9 advanced algorithms</strong> (Logistic Regression, SVM, Decision Trees, Random Forest, XGBoost, Neural Networks) to forecast stock price direction with <strong>62-73% accuracy</strong></li>
-                                        <li>Integrated <strong>23+ technical indicators</strong> (RSI, MACD, Bollinger Bands, ADX, volatility & momentum measures) with ensemble voting models and time-series validation for robust, leak-free predictions</li>
-                                        <li>Developed interactive React + D3.js dashboard with customizable layouts, live charts, backtesting suite with portfolio simulation, and transaction cost modeling</li>
-                                        <li>Implemented automated trading integration via Interactive Brokers API for paper trading, live alerts, and portfolio rebalancing with enterprise features like REST API access and multi-tenant user management</li>
-                                        <li>Deployed on AWS serverless infrastructure delivering institutional-quality prediction tools with AutoML, deep learning models, and alternative data integration (news & sentiment analysis)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- FolioLab Interactive Gallery -->
-            <div class="container mb-5 fade-in">
-                <div class="project-gallery">
-                    <div class="gallery-container">
-                        <h4 class="gallery-title">
-                            <i class="fas fa-images me-2"></i>FolioLab Project Gallery
-                        </h4>
-                        
-                        <!-- Bootstrap Carousel -->
-                        <div id="foliolabCarousel" class="carousel slide project-carousel" data-bs-ride="false">
-                            <!-- Indicators -->
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Architecture Overview"></button>
-                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="1" aria-label="ML Pipeline"></button>
-                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="2" aria-label="Portfolio Dashboard"></button>
-                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="3" aria-label="Trading Interface"></button>
-                                <button type="button" data-bs-target="#foliolabCarousel" data-bs-slide-to="4" aria-label="Horizon Chart"></button>
-                            </div>
-                            
-                            <!-- Slides -->
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/FolioLab.png" class="d-block w-100" alt="FolioLab Architecture" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>Cloud Infrastructure Design</strong><br>
-                                        AWS serverless architecture with API Gateway, Lambda, DynamoDB, and S3 integration
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/Python System Architecture.png" class="d-block w-100" alt="ML Pipeline Architecture" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>ML Pipeline Architecture</strong><br>
-                                        Data processing, feature engineering, and model training components
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/Portfolio 1.png" class="d-block w-100" alt="Portfolio Dashboard" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>Portfolio Analytics Dashboard</strong><br>
-                                        Main analytics interface with performance metrics and risk analysis
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/Portfolio 2.png" class="d-block w-100" alt="Trading Interface" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>Advanced Trading Interface</strong><br>
-                                        Interactive trading dashboard with real-time market data
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/Horizon Chart.png" class="d-block w-100" alt="Horizon Chart" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>Time Series Analysis Visualization</strong><br>
-                                        Horizon chart displaying temporal patterns in financial data
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Controls -->
-                            <button class="carousel-control-prev" type="button" data-bs-target="#foliolabCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#foliolabCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                        
-                        <!-- Gallery Navigation -->
-                        <div class="gallery-nav">
-                            <div class="gallery-counter">
-                                <span id="foliolab-current">1</span> of <span id="foliolab-total">5</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Thumbnail Gallery -->
-                        <div class="thumbnail-gallery">
-                            <img src="images/FolioLab.png" class="thumbnail active" onclick="goToSlide('foliolabCarousel', 0)" alt="Architecture">
-                            <img src="images/Python System Architecture.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 1)" alt="ML Pipeline">
-                            <img src="images/Portfolio 1.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 2)" alt="Dashboard">
-                            <img src="images/Portfolio 2.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 3)" alt="Trading">
-                            <img src="images/Horizon Chart.png" class="thumbnail" onclick="goToSlide('foliolabCarousel', 4)" alt="Chart">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-5 bg-light">
-            <div class="container fade-in">
-
-                <!-- Real Estate Analysis Project -->
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-10">
-                        <div class="card shadow-sm project-card border-success">
-                            <div class="card-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="project-icon bg-success text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                        <i class="fas fa-home"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="card-title mb-1 text-success">SmartMove - A County-Level U.S. Housing vs Cost-of-Living Dashboard</h4>
-                                        <p class="text-muted mb-0">Housing vs Cost Analysis</p>
-                                    </div>
-                                </div>
-                                <p class="text-muted small tools-used mb-3">
-                                    <i class="fas fa-wrench me-1 opacity-75"></i> 
-                                    <strong>Tools:</strong> Python (Pandas, SQLite), Tableau, Excel, Zillow API, Economic Policy Institute Data
-                                </p>
-                                <ul class="card-text">
-                                    <li>Analyzed <strong>3,000+ U.S. counties</strong> by joining Zillow home values with Economic Policy Institute cost-of-living data</li>
-                                    <li>Engineered custom ROI-to-Cost Burden metrics and calculated 10-year appreciation ratios for investment potential ranking</li>
-                                    <li>Built <strong>6 interactive Tableau dashboards</strong> with filters, maps, and rankings for dynamic housing trend exploration</li>
-                                    <li>Enabled data-driven decision-making for housing investment and relocation planning</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Real Estate Project Gallery -->
-                <div class="container mb-5">
-                    <div class="project-gallery">
-                        <div class="gallery-container">
-                            <h4 class="gallery-title">
-                                <i class="fas fa-images me-2"></i>SmartMove Project Gallery
-                            </h4>
-                            
-                            <!-- Bootstrap Carousel -->
-                            <div id="realestateCarousel" class="carousel slide project-carousel" data-bs-ride="false">
-                                <!-- Indicators -->
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#realestateCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Architecture"></button>
-                                    <button type="button" data-bs-target="#realestateCarousel" data-bs-slide-to="1" aria-label="Interactive Dashboard"></button>
-                                </div>
-                                
-                                <!-- Slides -->
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="images/Real Estate.png" class="d-block w-100" alt="Real Estate Architecture" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>Project Architecture</strong><br>
-                                            Data pipeline connecting Zillow API, Economic Policy Institute data, and Tableau visualization
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="d-flex justify-content-center align-items-center" style="height: 400px; background: #f8f9fa;">
-                                            <div class="analytics-showcase text-center p-4">
-                                                <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
-                                                <h5>Real Estate Analytics Dashboard</h5>
-                                                <p class="text-muted mb-3">
-                                                    Comprehensive analysis of 3,000+ U.S. counties featuring interactive maps, 
-                                                    market trends, and comparative analytics with dynamic filtering capabilities.
-                                                </p>
-                                                <div class="analytics-features">
-                                                    <div class="row text-start">
-                                                        <div class="col-md-6">
-                                                            <ul class="list-unstyled">
-                                                                <li><i class="fas fa-check text-success me-2"></i>Interactive County Maps</li>
-                                                                <li><i class="fas fa-check text-success me-2"></i>Price Trend Analysis</li>
-                                                                <li><i class="fas fa-check text-success me-2"></i>Market Forecasting</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <ul class="list-unstyled">
-                                                                <li><i class="fas fa-check text-success me-2"></i>Dynamic Filtering</li>
-                                                                <li><i class="fas fa-check text-success me-2"></i>Regional Comparisons</li>
-                                                                <li><i class="fas fa-check text-success me-2"></i>Performance Metrics</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-4">
-                                                    <button class="btn btn-primary btn-lg" onclick="openInteractiveDashboard()">
-                                                        <i class="fas fa-expand me-2"></i>View Interactive Dashboard
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Controls -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#realestateCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#realestateCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            
-                            <!-- Gallery Navigation -->
-                            <div class="gallery-nav">
-                                <div class="gallery-counter">
-                                    <span id="realestate-current">1</span> of <span id="realestate-total">2</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                </div>
-
-                <!-- E-Commerce Analytics Project -->
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-10">
-                        <div class="card shadow-sm project-card border-info">
-                            <div class="card-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="project-icon bg-info text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="card-title mb-1 text-info">E-Commerce Sales Analytics Platform</h4>
-                                        <p class="text-muted mb-0">End-to-End AWS Data Pipeline & Business Intelligence</p>
-                                    </div>
-                                </div>
-                                <p class="text-muted small tools-used mb-3">
-                                    <i class="fas fa-wrench me-1 opacity-75"></i> 
-                                    <strong>Tools:</strong> AWS (S3, Glue, Redshift), SQL, Tableau, Power BI, Python (Pandas), PySpark
-                                </p>
-                                <ul class="card-text">
-                                    <li>Designed and executed end-to-end data analytics pipeline using AWS services for multi-country sales analysis</li>
-                                    <li>Cleaned and transformed raw CSV data using AWS Glue (PySpark), then modeled and loaded into Redshift</li>
-                                    <li>Built interactive dashboards identifying <strong>40% Q4 sales spike</strong> and key underperforming regions</li>
-                                    <li>Created comprehensive BA documentation including BRD, stakeholder maps, user stories, and executive insights</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- E-Commerce Project Gallery -->
-                <div class="container mb-5">
-                    <div class="project-gallery">
-                        <div class="gallery-container">
-                            <h4 class="gallery-title">
-                                <i class="fas fa-images me-2"></i>E-Commerce Analytics Gallery
-                            </h4>
-                            
-                            <!-- Bootstrap Carousel -->
-                            <div id="ecommerceCarousel" class="carousel slide project-carousel" data-bs-ride="false">
-                                <!-- Indicators -->
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#ecommerceCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="AWS Pipeline"></button>
-                                    <button type="button" data-bs-target="#ecommerceCarousel" data-bs-slide-to="1" aria-label="Power BI Dashboard 1"></button>
-                                    <button type="button" data-bs-target="#ecommerceCarousel" data-bs-slide-to="2" aria-label="Power BI Dashboard 2"></button>
-                                    <button type="button" data-bs-target="#ecommerceCarousel" data-bs-slide-to="3" aria-label="QR Code"></button>
-                                </div>
-                                
-                                <!-- Slides -->
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="images/Aws-Data-Pipeline.png" class="d-block w-100" alt="AWS Pipeline" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>AWS Data Pipeline Architecture</strong><br>
-                                            End-to-end data flow from S3 ingestion to Redshift analytics via Glue transformations
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/PowerBI1.png" class="d-block w-100" alt="Power BI Dashboard 1" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>Sales Analytics Dashboard</strong><br>
-                                            Regional performance metrics and trend analysis with interactive filters
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/PowerBI2.png" class="d-block w-100" alt="Power BI Dashboard 2" onclick="openImageModal(this)">
-                                        <div class="image-caption">
-                                            <strong>Performance Metrics Dashboard</strong><br>
-                                            Quarterly trends and key performance indicators with drill-down capabilities
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="d-flex justify-content-center align-items-center" style="height: 400px; background: #f8f9fa;">
-                                            <div class="text-center p-4">
-                                                <img src="images/Ecommerce Sales Analysis-QR.jpg" class="rounded shadow-sm mb-3" style="max-width: 200px;" alt="QR Code" onclick="openImageModal(this)">
-                                                <h5>Interactive Dashboard Access</h5>
-                                                <p class="text-muted">
-                                                    <i class="fas fa-qrcode me-2"></i>Scan QR code to access live Power BI dashboard
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Controls -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#ecommerceCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#ecommerceCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            
-                            <!-- Gallery Navigation -->
-                            <div class="gallery-nav">
-                                <div class="gallery-counter">
-                                    <span id="ecommerce-current">1</span> of <span id="ecommerce-total">4</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Thumbnail Gallery -->
-                            <div class="thumbnail-gallery">
-                                <img src="images/Aws-Data-Pipeline.png" class="thumbnail active" onclick="goToSlide('ecommerceCarousel', 0)" alt="AWS Pipeline">
-                                <img src="images/PowerBI1.png" class="thumbnail" onclick="goToSlide('ecommerceCarousel', 1)" alt="Dashboard 1">
-                                <img src="images/PowerBI2.png" class="thumbnail" onclick="goToSlide('ecommerceCarousel', 2)" alt="Dashboard 2">
-                                <img src="images/Ecommerce Sales Analysis-QR.jpg" class="thumbnail" onclick="goToSlide('ecommerceCarousel', 3)" alt="QR Code">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Additional Projects Grid -->
-                <div class="row g-4 mb-5">
-                    <!-- Serverless App -->
-                    <div class="col-lg-6">
-                        <div class="card shadow-sm project-card h-100">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="project-icon bg-warning text-dark rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                        <i class="fas fa-cloud"></i>
-                                    </div>
-                                    <h5 class="card-title mb-0">Serverless Web Application</h5>
-                                </div>
-                                <p class="text-muted small tools-used mb-3">
-                                    <i class="fas fa-wrench me-1 opacity-75"></i> AWS Services, GitHub, VS Code
-                                </p>
-                                <ul class="card-text small">
-                                    <li>Deployed full-stack serverless app using AWS: EC2, Lambda, S3, API Gateway</li>
-                                    <li>Implemented AWS Cognito authentication and Step Functions automation</li>
-                                    <li>Reduced manual triggers by <strong>30%</strong> with automated workflows</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- DevOps Pipeline -->
-                    <div class="col-lg-6">
-                        <div class="card shadow-sm project-card h-100">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="project-icon bg-dark text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                        <i class="fas fa-cogs"></i>
-                                    </div>
-                                    <h5 class="card-title mb-0">DevOps CI/CD Pipeline</h5>
-                                </div>
-                                <p class="text-muted small tools-used mb-3">
-                                    <i class="fas fa-wrench me-1 opacity-75"></i> Jenkins, GitHub, Maven, SonarQube, Docker
-                                </p>
-                                <ul class="card-text small">
-                                    <li>Configured Jenkins for automated builds and testing</li>
-                                    <li>Integrated SonarQube for code quality assurance</li>
-                                    <li>Deployed with Docker containers for scalability</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Additional Projects Gallery -->
-                <div class="project-gallery">
-                    <div class="gallery-container">
-                        <h4 class="gallery-title">
-                            <i class="fas fa-images me-2"></i>Additional Projects Gallery
-                        </h4>
-                        
-                        <!-- Bootstrap Carousel -->
-                        <div id="additionalCarousel" class="carousel slide project-carousel" data-bs-ride="false">
-                            <!-- Indicators -->
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#additionalCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Serverless App"></button>
-                                <button type="button" data-bs-target="#additionalCarousel" data-bs-slide-to="1" aria-label="DevOps Pipeline"></button>
-                            </div>
-                            
-                            <!-- Slides -->
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/Serverless-App.png" class="d-block w-100" alt="Serverless Architecture" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>Serverless Web Application</strong><br>
-                                        AWS-based architecture with Lambda, API Gateway, Cognito, and Step Functions
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/DevOps.png" class="d-block w-100" alt="DevOps Pipeline" onclick="openImageModal(this)">
-                                    <div class="image-caption">
-                                        <strong>DevOps CI/CD Pipeline</strong><br>
-                                        Jenkins automation with GitHub integration, SonarQube, and Docker deployment
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Controls -->
-                            <button class="carousel-control-prev" type="button" data-bs-target="#additionalCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#additionalCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                        
-                        <!-- Gallery Navigation -->
-                        <div class="gallery-nav">
-                            <div class="gallery-counter">
-                                <span id="additional-current">1</span> of <span id="additional-total">2</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Thumbnail Gallery -->
-                        <div class="thumbnail-gallery">
-                            <img src="images/Serverless-App.png" class="thumbnail active" onclick="goToSlide('additionalCarousel', 0)" alt="Serverless">
-                            <img src="images/DevOps.png" class="thumbnail" onclick="goToSlide('additionalCarousel', 1)" alt="DevOps">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Call to Action -->
-                <div class="text-center mt-5">
-                    <div class="card bg-gradient-primary text-white">
-                        <div class="card-body py-4">
-                            <h4 class="mb-3">Interested in Collaborating?</h4>
-                            <p class="mb-3">Let's build something amazing together using data science and cutting-edge technology.</p>
-                            <a href="index.html#contact" class="btn btn-light btn-lg me-3">
-                                <i class="fas fa-envelope me-2"></i>Get In Touch
-                            </a>
-                            <a href="experience.html" class="btn btn-outline-light btn-lg">
-                                <i class="fas fa-briefcase me-2"></i>View Experience
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <div class="container">
-            <p class="mb-2">&copy; 2025 Yadnyeya Vairat. All Rights Reserved.</p>
-             <p class="mb-0 small">
-                 <a href="https://www.linkedin.com/in/yadnyeya-vairat/" target="_blank" rel="noopener noreferrer" class="text-white-50 text-decoration-none me-2" aria-label="Visit Yadnyeya's LinkedIn profile">LinkedIn</a> |
-                 <a href="https://github.com/Yadnyeya" target="_blank" rel="noopener noreferrer" class="text-white-50 text-decoration-none ms-2" aria-label="Visit Yadnyeya's GitHub profile">GitHub</a>
-             </p>
+        <div class="proj__spec">
+          <div class="spec"><span class="label">language</span><span><b>C++</b></span></div>
+          <div class="spec"><span class="label">venue model</span><span>Simulated limit order book</span></div>
+          <div class="spec"><span class="label">signals</span><span>Microprice, order-flow imbalance</span></div>
+          <div class="spec"><span class="label">diagnostic</span><span>10s markouts, inventory variance</span></div>
+          <div class="spec"><span class="label">sample</span><span><b>100,000+</b> fills</span></div>
         </div>
-    </footer>
+      </article>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+      <!-- 2 -->
+      <article class="proj reveal" id="options">
+        <div class="proj__top">
+          <div>
+            <span class="proj__kind">derivatives</span>
+            <p class="role__where">Python &middot; listed options</p>
+          </div>
+          <div>
+            <h3>Options Pricing &amp; Volatility Surface Engine</h3>
+            <ul class="bul">
+              <li>Programmed a Python derivatives pricing engine with <strong>Black-Scholes, binomial tree, and Monte Carlo</strong> simulation, cross-validating outputs across US equity options to verify convergence and pricing consistency.</li>
+              <li>Constructed implied-volatility surfaces from listed option chains across <strong>10 US equities</strong>, mapping strike and maturity to reveal volatility smiles, skew, and term-structure dynamics.</li>
+              <li>Simulated delta-hedged short volatility positions over <strong>5 years</strong>, comparing daily versus weekly rebalancing under transaction costs to quantify P&amp;L variance and hedging cost tradeoffs.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj__spec">
+          <div class="spec"><span class="label">models</span><span>Black-Scholes, binomial, Monte Carlo</span></div>
+          <div class="spec"><span class="label">surface</span><span>Smile, skew, term structure</span></div>
+          <div class="spec"><span class="label">universe</span><span><b>10</b> US equity chains</span></div>
+          <div class="spec"><span class="label">hedging test</span><span><b>5 years</b>, daily vs weekly</span></div>
+          <div class="spec"><span class="label">frictions</span><span>Transaction costs included</span></div>
+        </div>
+      </article>
 
-    
-    <script src="js/script.js"></script>
-    <script src="js/gallery.js"></script>
+      <!-- 3 -->
+      <article class="proj reveal" id="futures">
+        <div class="proj__top">
+          <div>
+            <span class="proj__kind">statistical arbitrage</span>
+            <p class="role__where">Python &middot; cross-asset futures</p>
+          </div>
+          <div>
+            <h3>Cross-Asset Futures Relative Value &amp; Statistical Arbitrage</h3>
+            <ul class="bul">
+              <li>Researched <strong>40 economically linked futures spreads</strong> across equity-index, fixed-income, and commodity markets, applying liquidity filters and cointegration tests where <strong>8 survived Benjamini-Hochberg correction</strong>.</li>
+              <li>Modeled mean-reverting spreads with <strong>Ornstein-Uhlenbeck</strong> time-series models, estimated a 20-day median half-life, and walk-forward tested hedge ratios, with rolling OLS outperforming Kalman filtering out of sample.</li>
+              <li>Converted statistical spread signals into margin-aware futures positions, filtering trades by half-life and expected convergence, leaving <strong>3 profitable out of sample after costs</strong>.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj__spec">
+          <div class="spec"><span class="label">universe</span><span><b>40</b> spreads &middot; equity, rates, commodity</span></div>
+          <div class="spec"><span class="label">multiple testing</span><span>Benjamini-Hochberg &rarr; <b>8</b> survive</span></div>
+          <div class="spec"><span class="label">mean reversion</span><span>OU, <b>20-day</b> median half-life</span></div>
+          <div class="spec"><span class="label">hedge ratio</span><span>Rolling OLS beat Kalman</span></div>
+          <div class="spec"><span class="label">after costs</span><span><b>3</b> profitable out of sample</span></div>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="proj reveal" id="platform">
+        <div class="proj__top">
+          <div>
+            <span class="proj__kind">systematic platform</span>
+            <p class="role__where">Python &middot; FastAPI &middot; cloud</p>
+          </div>
+          <div>
+            <h3>AI-Powered Systematic Trading &amp; Research Platform</h3>
+            <ul class="bul">
+              <li>Architected a cloud-deployed Python quantitative platform spanning <strong>9 market data and fundamentals providers</strong>, covering the full systematic investing workflow from research to broker-connected execution via FastAPI services.</li>
+              <li>Engineered a machine learning pipeline and model library with TradingView integration, turning saved models into a reproducible workbench.</li>
+              <li>Developed a portfolio optimization and risk analytics engine spanning <strong>11 methods</strong> from Black-Litterman to regime-aware allocation, with Monte Carlo simulation quantifying VaR, drawdown, and volatility.</li>
+              <li>Built an algorithmic strategy builder converting signal-driven trading rules into backtests across 8 timeframes with transaction costs and slippage.</li>
+              <li>Implemented an automated system executing strategies via <strong>Interactive Brokers</strong> under configurable risk limits, logging trade-level P&amp;L.</li>
+              <li>Orchestrated multi-agent LLM teams, using knowledge graphs and RAG with MCP tool calls to run platform functions and reason over outputs, making the entire quant stack operable through natural language.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj__spec">
+          <div class="spec"><span class="label">data</span><span><b>9</b> providers</span></div>
+          <div class="spec"><span class="label">allocation</span><span><b>11</b> optimization methods</span></div>
+          <div class="spec"><span class="label">backtest</span><span>8 timeframes, costs + slippage</span></div>
+          <div class="spec"><span class="label">execution</span><span>Interactive Brokers, risk limits</span></div>
+          <div class="spec"><span class="label">interface</span><span>Multi-agent LLM, RAG, MCP</span></div>
+        </div>
+        <ul class="tags">
+          <li>Python 3.13</li><li>FastAPI</li><li>React + TypeScript</li><li>PostgreSQL</li><li>Redis</li><li>Docker</li><li>Anthropic API</li><li>Knowledge Graphs</li><li>RAG</li><li>MCP</li><li>Plotly</li><li>IBKR API</li>
+        </ul>
+
+        <div class="shots">
+          <figure class="shot"><img src="images/My Quant 1.png" alt="Platform research dashboard" loading="lazy"><figcaption>Research dashboard</figcaption></figure>
+          <figure class="shot"><img src="images/My Quant 2.png" alt="Analytics and prediction workflow" loading="lazy"><figcaption>Analytics workflow</figcaption></figure>
+          <figure class="shot"><img src="images/My Quant 3.png" alt="Technical indicators and model insight views" loading="lazy"><figcaption>Indicators &amp; model insight</figcaption></figure>
+          <figure class="shot"><img src="images/My Quant 4.png" alt="Portfolio optimization and risk analytics" loading="lazy"><figcaption>Optimization &amp; risk</figcaption></figure>
+          <figure class="shot"><img src="images/My Quant 5.png" alt="Backtesting engine and strategy reporting" loading="lazy"><figcaption>Backtest engine</figcaption></figure>
+          <figure class="shot"><img src="images/My Quant 6.png" alt="Fundamental analysis toolkit" loading="lazy"><figcaption>Fundamental toolkit</figcaption></figure>
+          <figure class="shot"><img src="images/My Quant 7.png" alt="End-to-end research and execution dashboard" loading="lazy"><figcaption>Research to execution</figcaption></figure>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Earlier work -->
+  <section class="sec" id="earlier">
+    <div class="wrap">
+      <div class="ledger">
+        <div class="ledger__rail"><span class="label">earlier work</span></div>
+        <div>
+          <h2>Before the quant track</h2>
+          <p class="dim" style="margin-top:14px;max-width:62ch">Data engineering, cloud, and BI projects from the MIS degree. They are why the plumbing on the research above didn't need to be learned twice.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:34px">
+
+        <article class="mini reveal">
+          <div>
+            <span class="proj__kind">ml platform</span>
+            <p class="role__where">AWS serverless</p>
+          </div>
+          <div>
+            <h4>FolioLab &mdash; Stock Prediction Platform</h4>
+            <p>Cloud-native ML platform benchmarking classification models for price direction across 23+ technical indicators, with time-series validation, a React and D3.js dashboard, backtesting with transaction-cost modeling, and Interactive Brokers paper-trading integration. Deployed on AWS Lambda, API Gateway, DynamoDB, S3, and CloudFront.</p>
+            <div class="shots" style="margin-top:16px">
+              <figure class="shot"><img src="images/FolioLab.png" alt="FolioLab AWS serverless architecture" loading="lazy"><figcaption>Cloud architecture</figcaption></figure>
+              <figure class="shot"><img src="images/Python System Architecture.png" alt="ML pipeline architecture" loading="lazy"><figcaption>ML pipeline</figcaption></figure>
+              <figure class="shot"><img src="images/Portfolio 1.png" alt="Portfolio analytics dashboard" loading="lazy"><figcaption>Portfolio analytics</figcaption></figure>
+              <figure class="shot"><img src="images/Portfolio 2.png" alt="Trading interface" loading="lazy"><figcaption>Trading interface</figcaption></figure>
+              <figure class="shot"><img src="images/Horizon Chart.png" alt="Horizon chart of time series patterns" loading="lazy"><figcaption>Horizon chart</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="mini reveal">
+          <div>
+            <span class="proj__kind">housing analytics</span>
+            <p class="role__where">Python &middot; Tableau</p>
+          </div>
+          <div>
+            <h4>SmartMove &mdash; County-Level Housing vs Cost of Living</h4>
+            <p>Joined Zillow home values with Economic Policy Institute cost-of-living data across <strong>3,000+ U.S. counties</strong>, engineered ROI-to-cost-burden metrics and 10-year appreciation ratios, and shipped 6 interactive Tableau dashboards with maps, filters, and rankings.</p>
+            <div class="btn-row" style="margin-top:16px">
+              <a class="btn" href="https://public.tableau.com/views/USRealEstateInvestmentAnalysis/Dashboard2" target="_blank" rel="noopener">Open the dashboard</a>
+            </div>
+            <div class="shots" style="margin-top:16px">
+              <figure class="shot"><img src="images/Real Estate.png" alt="SmartMove data pipeline and dashboard architecture" loading="lazy"><figcaption>Pipeline &amp; dashboard</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="mini reveal">
+          <div>
+            <span class="proj__kind">data engineering</span>
+            <p class="role__where">AWS &middot; Redshift</p>
+          </div>
+          <div>
+            <h4>E-Commerce Sales Analytics Pipeline</h4>
+            <p>End-to-end AWS pipeline for multi-country sales analysis: raw CSV ingestion to S3, PySpark transformation in AWS Glue, modeling and loading into Redshift, then Tableau and Power BI dashboards that surfaced a <strong>40% Q4 spike</strong> and the underperforming regions behind it.</p>
+            <div class="shots" style="margin-top:16px">
+              <figure class="shot"><img src="images/Aws-Data-Pipeline.png" alt="AWS data pipeline architecture" loading="lazy"><figcaption>Pipeline architecture</figcaption></figure>
+              <figure class="shot"><img src="images/PowerBI1.png" alt="Regional sales performance dashboard" loading="lazy"><figcaption>Regional performance</figcaption></figure>
+              <figure class="shot"><img src="images/PowerBI2.png" alt="Quarterly KPI dashboard" loading="lazy"><figcaption>Quarterly KPIs</figcaption></figure>
+              <figure class="shot"><img src="images/Ecommerce Sales Analysis-QR.jpg" alt="QR code linking to the live Power BI dashboard" loading="lazy"><figcaption>Live dashboard QR</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="mini reveal">
+          <div>
+            <span class="proj__kind">infrastructure</span>
+            <p class="role__where">AWS &middot; Jenkins</p>
+          </div>
+          <div>
+            <h4>Serverless Application &amp; CI/CD Pipeline</h4>
+            <p>Full-stack serverless app on EC2, Lambda, S3, and API Gateway with Cognito authentication and Step Functions automation that cut manual triggers by <strong>30%</strong>. Separately, a Jenkins pipeline with SonarQube quality gates and Docker deployment.</p>
+            <div class="shots" style="margin-top:16px">
+              <figure class="shot"><img src="images/Serverless-App.png" alt="Serverless application architecture" loading="lazy"><figcaption>Serverless architecture</figcaption></figure>
+              <figure class="shot"><img src="images/DevOps.png" alt="Jenkins CI/CD pipeline" loading="lazy"><figcaption>CI/CD pipeline</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="ledger reveal">
+        <div class="ledger__rail"><span class="label">contact</span></div>
+        <div>
+          <h2>Want the code walkthrough?</h2>
+          <p class="dim" style="margin-top:14px">Happy to screen-share any of these and talk through what broke.</p>
+          <div class="btn-row">
+            <a class="btn btn--solid" href="index.html#contact">Get in touch</a>
+            <a class="btn" href="experience.html">Experience</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>&copy; 2026 Yadnyeya Vairat</span>
+    <span>Newark, NJ</span>
+    <span class="sp"><a href="https://www.linkedin.com/in/yadnyeya-vairat/" target="_blank" rel="noopener">LinkedIn</a></span>
+    <span><a href="https://github.com/Yadnyeya" target="_blank" rel="noopener">GitHub</a></span>
+    <span><a href="Resume.pdf" target="_blank" rel="noopener">Resume</a></span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
