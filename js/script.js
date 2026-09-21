@@ -16,13 +16,6 @@
     });
   }
 
-  /* ---- ladder bars: stagger the one page-load sequence ---- */
-  if (!reduce) {
-    document.querySelectorAll('.rung__bar i').forEach(function (bar, i) {
-      bar.style.animationDelay = (60 + i * 55) + 'ms';
-    });
-  }
-
   /* ---- scroll reveal ---- */
   var targets = document.querySelectorAll('.reveal');
   if (targets.length && 'IntersectionObserver' in window && !reduce) {

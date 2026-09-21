@@ -31,59 +31,55 @@
 
 <main id="main">
 
-  <!-- Hero: a depth ladder below the mid. Every rung is a real figure from the work. -->
+  <!-- Hero: name block with the portrait held on the right rail. -->
   <header class="hero">
     <div class="wrap">
       <div class="ladder">
         <div class="mid">
-          <span class="label mid__tag">mid &middot; quantitative trading &amp; research</span>
-          <h1>Yadnyeya Vairat</h1>
-          <p class="mid__sub">I build the whole stack behind a trading idea. Data pipeline, signal, pricing, execution, then the diagnostics that tell me whether any of it actually worked.</p>
-          <div class="mid__meta">
-            <span><b>Rutgers MQF</b> &middot; Dec 2027</span>
-            <span><b>Newark, NJ</b></span>
-            <span><b>Open to</b> Summer 2027 internship</span>
+          <div class="mid__txt">
+            <span class="label mid__tag">mid &middot; quantitative trading &amp; research</span>
+            <h1>Yadnyeya Vairat</h1>
+            <p class="mid__sub">I build the whole stack behind a trading idea. Data pipeline, signal, pricing, execution, then the diagnostics that tell me whether any of it actually worked.</p>
+            <div class="mid__meta">
+              <span><b>Rutgers MQF</b> &middot; Dec 2027</span>
+              <span><b>Newark, NJ</b></span>
+              <span><b>Open to</b> Summer 2027 internship</span>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--solid" href="projects.html">See the research</a>
+              <a class="btn" href="experience.html">Experience</a>
+              <a class="btn" href="Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+            </div>
           </div>
-          <div class="btn-row">
-            <a class="btn btn--solid" href="projects.html">See the research</a>
-            <a class="btn" href="experience.html">Experience</a>
-            <a class="btn" href="Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-          </div>
-        </div>
-
-        <div class="rung rung--bid">
-          <span class="rung__qty">11</span>
-          <span class="rung__bar"><i style="--w:34%"></i><span class="rung__label">portfolio optimization methods, Black-Litterman through regime-aware allocation</span></span>
-          <span class="rung__side">allocation</span>
-        </div>
-        <div class="rung rung--bid">
-          <span class="rung__qty">5 yr</span>
-          <span class="rung__bar"><i style="--w:24%"></i><span class="rung__label">delta-hedged short volatility simulation under transaction costs</span></span>
-          <span class="rung__side">derivatives</span>
-        </div>
-        <div class="rung rung--bid">
-          <span class="rung__qty">40</span>
-          <span class="rung__bar"><i style="--w:56%"></i><span class="rung__label">equity book with automated P&amp;L and portfolio-risk monitoring</span></span>
-          <span class="rung__side">buy side</span>
+          <figure class="mid__shot">
+            <img src="images/headshot.jpg" width="660" height="880" alt="Yadnyeya Vairat" decoding="async">
+          </figure>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- The stack: this one genuinely is a sequence, so it gets numbered. -->
-  <section class="sec" id="stack">
+  <!-- Education -->
+  <section class="sec" id="education">
     <div class="wrap">
       <div class="ledger reveal">
-        <div class="ledger__rail"><span class="label">what i build</span></div>
+        <div class="ledger__rail"><span class="label">education</span></div>
         <div>
-          <h2>A trading idea has five stages. I've built every one.</h2>
-          <p class="dim" style="margin-top:14px">Most people specialize in a slice. I wanted to know where an edge actually dies, so I built each stage end to end and measured what the next one gave back.</p>
-          <div class="stack" style="margin-top:26px">
-            <div class="stack__step"><span class="stack__n">01</span><h3>Data</h3><p>Ingestion across 9 providers, Airflow-orchestrated ETL, survivorship and liquidity filters.</p></div>
-            <div class="stack__step"><span class="stack__n">02</span><h3>Signal</h3><p>Cointegration tests, Ornstein-Uhlenbeck half-lives, order-flow imbalance, microprice.</p></div>
-            <div class="stack__step"><span class="stack__n">03</span><h3>Pricing</h3><p>Black-Scholes, binomial trees, Monte Carlo, implied-vol surfaces and the Greeks.</p></div>
-            <div class="stack__step"><span class="stack__n">04</span><h3>Execution</h3><p>Limit order book simulation, inventory-aware quoting, broker-connected routing.</p></div>
-            <div class="stack__step"><span class="stack__n">05</span><h3>Diagnostics</h3><p>Markouts, inventory variance, walk-forward validation, transaction costs and slippage.</p></div>
+          <div class="edu" style="border-top:0;padding-top:0">
+            <div><span class="role__when">Dec 2027</span><p class="role__where">Newark, NJ</p></div>
+            <div>
+              <h3>Rutgers Business School</h3>
+              <p class="edu__deg">Master of Quantitative Finance</p>
+              <p class="edu__note">Algorithmic Trading &amp; Portfolio Management &middot; Derivatives &middot; Fixed Income &middot; Econometrics &middot; Quantitative Methods</p>
+              <p class="edu__note" style="margin-top:8px">Selected to represent Rutgers at the <b>Rotman International Trading Competition</b> (RITC), Toronto, Feb 2027</p>
+            </div>
+          </div>
+          <div class="edu">
+            <div><span class="role__when">Dec 2025</span><p class="role__where">Chico, CA</p></div>
+            <div>
+              <h3>California State University, Chico</h3>
+              <p class="edu__deg">B.S. Management Information Systems, Minor in Computer Science</p>
+            </div>
           </div>
         </div>
       </div>
@@ -109,27 +105,20 @@
     </div>
   </section>
 
-  <!-- Education -->
-  <section class="sec" id="education">
+  <!-- The stack: this one genuinely is a sequence, so it gets numbered. -->
+  <section class="sec" id="stack">
     <div class="wrap">
       <div class="ledger reveal">
-        <div class="ledger__rail"><span class="label">education</span></div>
+        <div class="ledger__rail"><span class="label">what i build</span></div>
         <div>
-          <div class="edu" style="border-top:0;padding-top:0">
-            <div><span class="role__when">Dec 2027</span><p class="role__where">Newark, NJ</p></div>
-            <div>
-              <h3>Rutgers Business School</h3>
-              <p class="edu__deg">Master of Quantitative Finance</p>
-              <p class="edu__note">Algorithmic Trading &amp; Portfolio Management &middot; Derivatives &middot; Fixed Income &middot; Econometrics &middot; Quantitative Methods</p>
-              <p class="edu__note" style="margin-top:8px">Selected to represent Rutgers at the <b>Rotman International Trading Competition</b> (RITC), Toronto, Feb 2027</p>
-            </div>
-          </div>
-          <div class="edu">
-            <div><span class="role__when">Dec 2025</span><p class="role__where">Chico, CA</p></div>
-            <div>
-              <h3>California State University, Chico</h3>
-              <p class="edu__deg">B.S. Management Information Systems, Minor in Computer Science</p>
-            </div>
+          <h2>A trading idea has five stages. I've built every one.</h2>
+          <p class="dim" style="margin-top:14px">Most people specialize in a slice. I wanted to know where an edge actually dies, so I built each stage end to end and measured what the next one gave back.</p>
+          <div class="stack" style="margin-top:26px">
+            <div class="stack__step"><span class="stack__n">01</span><h3>Data</h3><p>Ingestion across 9 providers, Airflow-orchestrated ETL, survivorship and liquidity filters.</p></div>
+            <div class="stack__step"><span class="stack__n">02</span><h3>Signal</h3><p>Cointegration tests, Ornstein-Uhlenbeck half-lives, order-flow imbalance, microprice.</p></div>
+            <div class="stack__step"><span class="stack__n">03</span><h3>Pricing</h3><p>Black-Scholes, binomial trees, Monte Carlo, implied-vol surfaces and the Greeks.</p></div>
+            <div class="stack__step"><span class="stack__n">04</span><h3>Execution</h3><p>Limit order book simulation, inventory-aware quoting, broker-connected routing.</p></div>
+            <div class="stack__step"><span class="stack__n">05</span><h3>Diagnostics</h3><p>Markouts, inventory variance, walk-forward validation, transaction costs and slippage.</p></div>
           </div>
         </div>
       </div>
